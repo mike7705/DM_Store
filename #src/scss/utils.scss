@@ -1,0 +1,144 @@
+//====================================================================================================
+@use "sass:math";
+//====================================================================================================
+.hidden {
+    display: none;
+    &-sm {
+        @media (max-width: $md4 + px) {
+            display: none;
+        }
+    }
+    &-md {
+        @media (max-width: $md3 + px) {
+            display: none;
+        }
+    }
+    &-lg {
+        @media (max-width: $md2 + px) {
+            display: none;
+        }
+    }
+    &-xl {
+        @media (max-width: $md1 + px) {
+            display: none;
+        }
+    }
+}
+.order {
+    &-0 {
+        order: 0;
+    }
+    &-1 {
+        order: 1;
+    }
+    &-2 {
+        order: 2;
+    }
+    &-3 {
+        order: 3;
+    }
+    &-4 {
+        order: 4;
+    }
+    &-5 {
+        order: 5;
+    }
+    &-sm {
+        @media (max-width: $md4 + px) {
+            &-0 {
+                order: 0;
+            }
+            &-1 {
+                order: 1;
+            }
+            &-2 {
+                order: 2;
+            }
+            &-3 {
+                order: 3;
+            }
+            &-4 {
+                order: 4;
+            }
+            &-5 {
+                order: 5;
+            }
+        }
+    }
+    &-md {
+        @media (max-width: $md3 + px) {
+            &-0 {
+                order: 0;
+            }
+            &-1 {
+                order: 1;
+            }
+            &-2 {
+                order: 2;
+            }
+            &-3 {
+                order: 3;
+            }
+            &-4 {
+                order: 4;
+            }
+            &-5 {
+                order: 5;
+            }
+        }
+    }
+    &-lg {
+        @media (max-width: $md2 + px) {
+            &-0 {
+                order: 0;
+            }
+            &-1 {
+                order: 1;
+            }
+            &-2 {
+                order: 2;
+            }
+            &-3 {
+                order: 3;
+            }
+            &-4 {
+                order: 4;
+            }
+            &-5 {
+                order: 5;
+            }
+        }
+    }
+    &-xl {
+        @media (max-width: $md1 + px) {
+            &-0 {
+                order: 0;
+            }
+            &-1 {
+                order: 1;
+            }
+            &-2 {
+                order: 2;
+            }
+            &-3 {
+                order: 3;
+            }
+            &-4 {
+                order: 4;
+            }
+            &-5 {
+                order: 5;
+            }
+        }
+    }
+}
+.pull-left {
+    float: left !important;
+}
+.pull-right {
+    float: right !important;
+}
+.fill-main-color {
+    fill: $main-color !important;
+}
+//====================================================================================================
