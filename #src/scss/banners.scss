@@ -1,0 +1,156 @@
+.banners {
+    min-height: 275px;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    @include flex;
+    @include flexRow;
+    @include flexAlignLeft;
+    .banners__container {
+        //width: $maxWidthContainer + px;
+        display: inherit;
+        width: inherit;
+        flex-wrap: nowrap;
+        @media (max-width: $md3 + px) {
+            flex-wrap: wrap;
+        }
+    }
+    & .banners__item {
+        flex: 1 1 auto;
+        width: 25%;
+        margin: 0;
+        min-width: 245px;
+        position: relative;
+        &.double-width {
+            width: 50%;
+            min-width: 490px;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+            &::after {
+                opacity: 0;
+            }
+        }
+        flex-wrap: nowrap;
+        @media (max-width: $md3 + px) {
+            & .banners__item {
+                width: 50%;
+                min-width: 192px;
+            }
+            & .banners__item.double_width {
+                width: 100%;
+                min-width: 384px;
+                break-before: always;
+            }
+        }
+        &::before {
+            opacity: 0;
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.5);
+            transition: opacity 0.3s ease;
+            -moz-transition: opacity 0.3s ease;
+            -ms-transition: opacity 0.3s ease;
+            -o-transition: opacity 0.3s ease;
+            -webkit-transition: opacity 0.3s ease;
+            z-index: 11;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 40%;
+            opacity: 1;
+            z-index: 10;
+            transition: opacity 0.3s ease;
+            -moz-transition: opacity 0.3s ease;
+            -ms-transition: opacity 0.3s ease;
+            -o-transition: opacity 0.3s ease;
+            -webkit-transition: opacity 0.3s ease;
+            background: -moz-linear-gradient(90deg, rgba(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+            background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+            background: -o-linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+            background: -ms-linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        }
+        & .banner__link {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        & .banner__text {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            top: 50%;
+            left: 0;
+            padding: 33px 40px;
+            z-index: 10;
+            & .banner_subtitle {
+                margin: 0 0 11px;
+                opacity: 0.7;
+                font-size: 0.667em;
+                line-height: 1.3em;
+                text-transform: uppercase;
+                letter-spacing: 0.8px;
+            }
+            & .banner__title {
+                max-height: 81px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 1.3333em;
+                line-height: 1.4em;
+            }
+        }
+        & .banner__image-wrapper {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 9;
+            color: #fff;
+            transition: all ease 0.5s;
+            @include flex;
+            @include flexAlignCenter;
+            @include flexAlignCenterVertically;
+            & .banner__image {
+                object-fit: cover;
+                width: inherit;
+                height: 100%;
+            }
+        }
+        &:hover .banner__image.scale_block_animate {
+            -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+    }
+}
+
+.scale_block_animate {
+    -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.scale_block_animate {
+    -webkit-transition: -webkit-transform 0.6s ease;
+    transition: transform 0.6s ease;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}

@@ -1,0 +1,61 @@
+.features__block {
+    width: 100% !important;
+    min-height: 20em;
+    padding: 0 !important;
+    margin: 0;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    border-bottom: 1px solid #ececec;
+    & .features__container {
+        max-width: $maxWidthContainer + px;
+        height: 100%;
+        margin: 0 auto;
+        & .features__wrapper {
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 60px;
+            .features__items {
+                @include flex;
+                @include flexAlignCenter;
+                flex-wrap: wrap;
+                @media (max-width: $md3 + px) {
+                    padding-bottom: 60px;
+                }
+                .feature {
+                    @include flex;
+                    @include flexColumn;
+                    @include flexAlignLeft;
+                    @include flexAlignCenterVertically;
+                    flex: 1 1 220px;
+                    padding: 10px 20px;
+                    min-width: 150px;
+                    max-width: 240px;
+                    .feature__icon {
+                        margin-bottom: 10px;
+                        max-height: 50px;
+                        flex-shrink: 0;
+                        align-self: center;
+                    }
+                    .feature__title {
+                        font-size: 1.0667em;
+                        line-height: 1.5625em;
+                        text-align: center;
+                        color: rgb(51, 51, 51);
+                        margin-bottom: 6px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .feature__description {
+                        font-size: 0.867em;
+                        line-height: 1.692em;
+                        color: rgb(102, 102, 102);
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.feature__text {
+}

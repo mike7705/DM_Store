@@ -1,19 +1,24 @@
-
 /* NAVIGATION BRAND TEXT
 ================================*/
-.navigation-brand-text{	
-	a{
+.navigation-brand-text {
+	a {
 		font-size: $navigation-brand-font-size;
 		font-weight: $navigation-brand-font-weight;
 		color: $navigation-brand-color;
 		text-decoration: none;
-		
-		@media (min-width: $landscape-width){
+
+		@media (min-width: $landscape-width) {
 			font-size: $navigation-brand-font-size-landscape;
 		}
 	}
-	
-	.navigation-header &{
+	@include flex;
+	span {
+		@include adaptiv-value-to("font-size", 14, 12, 767);
+		color: $navigation-brand-color;
+		text-decoration: none;
+		max-width: 220px;
+	}
+	.navigation-header & {
 		padding: 0 1rem;
 	}
 }

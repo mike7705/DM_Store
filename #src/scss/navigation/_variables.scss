@@ -2,7 +2,7 @@
 // ================================================
 
 // Screen size for media queries on landscape view
-$landscape-width: 768px;
+$landscape-width: 767px;
 
 // COLOR PALETTE
 // ================================================
@@ -13,21 +13,22 @@ $gray-02: #e9ecef !default;
 $gray-03: #dee2e6 !default;
 $gray-04: #868e96 !default;
 $gray-05: #495057 !default; // more dark
-
+$text-color: rgb(51, 51, 51);
 $main-color: #365edc !default; // purple
 
 // MAIN COLORS
 // ================================================
-$background-color: #365edc; //#5073e1;
-$font-color: lighten($gray-05, 5%);
+$background-color: $white;
+$font-color: $text-color;
 $font-color-hover: $main-color;
-$border-color: transparent;
+$border-color: $gray-02;
 $submenu-background-color: lighten($gray-01, 1.5%);
+$navigation-link-font-color: #555d65;
 
 // NAVIGATION
 // ================================================
-$navigation-height: 53px;
-$navigation-background-color: transparent;
+$navigation-height: 60px;
+$navigation-background-color: $background-color;
 $navigation-font-family: inherit;
 
 // NAVIGATION BODY (Offcanvas panel)
@@ -39,7 +40,7 @@ $navigation-body-background-color: $white;
 
 // NAVIGATION BODY HEADER
 // ================================================
-$navigation-body-header-padding: 0;
+$navigation-body-header-padding: 16px;
 $navigation-body-header-border: $border-color;
 
 // NAVIGATION BODY CLOSE BUTTON
@@ -50,13 +51,13 @@ $navigation-body-close-button-background-color: $gray-01;
 
 // NAVIGATION BODY SECTION
 // ================================================
-$navigation-body-section-padding: 0;
+$navigation-body-section-padding: 16px;
 
 // BRAND TEXT
 // ================================================
 $navigation-brand-color: $font-color;
 $navigation-brand-font-size: 16px;
-$navigation-brand-font-size-landscape: 24px;
+$navigation-brand-font-size-landscape: 22px;
 $navigation-brand-font-weight: bold;
 
 // LOGO
@@ -66,35 +67,33 @@ $navigation-logo-height-landscape: 48px;
 
 // NAVIGATION TOGGLER BUTTON
 // ================================================
-$button-toggler-width: 30px;
-$button-toggler-height: 30px;
+$button-toggler-width: 60px;
+$button-toggler-height: 60px;
 $button-toggler-icon-color: $font-color;
 
 // NAVIGATION LINK
 // ================================================
-$navigation-link-font-color: $white;
-$navigation-link-font-color-hover: $white;
+$navigation-link-font-color: $font-color;
+$navigation-link-font-color-hover: $font-color-hover;
 $navigation-link-font-color-hover-landscape: $font-color-hover;
 $navigation-link-font-size: 14px;
-$navigation-link-padding: 0px 16px;
-$navigation-link-padding-landscape: 18px 40px;
-$navigation-link-letter-spacing: 1.2px;
+$navigation-link-padding: 13px 16px;
+$navigation-link-padding-landscape: 10px 16px;
+$navigation-link-letter-spacing: 0.3px;
 $navigation-link-border-color: $border-color;
 $navigation-link-background-color-hover: transparent;
-//$navigation-item-background-color: $background-color;
-//$navigation-item-background-color-hover: $main-color;
 
 // Navigation link with text and icons
-$navigation-link-text-icon-width: 100%;
-$navigation-link-text-icon-font-size: 24px;
+$navigation-link-text-icon-width: 20px;
+$navigation-link-text-icon-font-size: 16px;
 $navigation-link-text-icon-font-awesome-size: 21px;
 
 // Navigation link icon item
-$navigation-link-icon-item-padding: 13px 16px;
+$navigation-link-icon-item-padding: 13px 6px;
 $navigation-link-icon-item-padding-landscape: 25px 25.6px;
 $navigation-link-icon-item-icon-width: 20px;
-$navigation-link-icon-item-icon-height: 26px;
-$navigation-link-icon-item-font-size: 25.6px;
+$navigation-link-icon-item-icon-height: 16px;
+$navigation-link-icon-item-font-size: 15.6px;
 $navigation-link-icon-item-font-awesome-size: 21px;
 
 // Navigation link avatar
@@ -121,11 +120,12 @@ $submenu-indicator-width-landscape: 6px;
 $submenu-indicator-height-landscape: 6px;
 $submenu-indicator-width-after: 6px;
 $submenu-indicator-height-after: 6px;
-$submenu-indicator-margin-after: -3px 0 0 -3px;
+//$submenu-indicator-margin-after: -3px 0 0 -3px;
+$submenu-indicator-margin-after: -5px 0 0 -2px;
 $submenu-indicator-border-width-after: 1px;
 $submenu-indicator-color: $font-color;
 $submenu-indicator-color-hover: $font-color-hover;
-$submenu-indicator-color-hover-landscape: $font-color-hover;
+$submenu-indicator-color-hover-landscape: $white;
 
 // NAVIGATION BUTTON
 // ================================================

@@ -1,14 +1,13 @@
 /* NAVIGATION MENU
 ================================*/
 .navigation-menu {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	width: 100%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	font-size: 0rem;
 	display: inline-block;
-	//float: left;
+	float: left;
 
 	@media (min-width: $landscape-width) {
 		width: auto;
@@ -19,9 +18,102 @@
 			@include flexSelfStretch();
 			@include flexStretch();
 		}
-		align-items: center;
+
 		.navigation-logo-top & {
 			@include flexAlignCenter();
+		}
+	}
+	/**
+	* ! Added for mobile version icons
+	*/
+	@media (max-width: $landscape-width) {
+		&.__mobile {
+			@include flexSelfStretch();
+			@include flexStretch();
+			@include flexAlignRight;
+			& .navigation-item.navigation-icon-item {
+				@include flex();
+				flex: 0 0 30px;
+				& a {
+					border: 0 !important;
+				}
+			}
+		}
+		&.__mobile-canvas {
+			background-color: #fafafa;
+			& li > a {
+				border-bottom: 1px solid rgb(233, 236, 239);
+				& > span {
+					font-weight: 700px !important;
+				}
+			}
+		}
+	}
+
+	/**
+	* ! End mobile version icons
+	*/
+
+	//! added for landscape ----------------
+	@media (min-width: $landscape-width) {
+		&.__mobile-canvas {
+			order: 3;
+			& li > a {
+				& > span {
+					@include adaptiv-value-to("font-size", 14, 9, 767);
+					font-weight: 700px !important;
+					text-transform: uppercase;
+				}
+			}
+			& li > a:hover span,
+			& li > a:hover i {
+				color: $main-color;
+			}
+		}
+
+		//all main menu
+		&._main-menu {
+			@include flex;
+			@include flexAlignCenter;
+			max-height: 53px;
+			width: 100%;
+			background-color: $main-color;
+			border-radius: 3px;
+			color: white;
+			// li.navigation-item
+			& .navigation-item {
+				&:hover {
+					background-color: #5073e1;
+				}
+				&.is-active {
+					background-color: #234ac7 !important;
+				}
+				// a.navigation-link
+				& .navigation-link {
+					@include adaptiv-value-to("font-size", 14, 9, 767);
+					color: white;
+					font-weight: 600;
+					text-transform: uppercase;
+					&.visited {
+						color: initial;
+					}
+					& .submenu-indicator {
+						margin-left: 6px;
+						&::after {
+							color: white;
+						}
+						&:hover {
+							color: initial;
+						}
+					}
+					& [class^="icon-"],
+					& [class*=" icon-"] {
+						font-size: 10px;
+						padding-right: 5px;
+						vertical-align: bottom;
+					}
+				}
+			}
 		}
 	}
 }
@@ -35,10 +127,12 @@
 
 	@media (min-width: $landscape-width) {
 		width: auto;
-		&.is-active .navigation-link {
-			background-color: #234ac7 !important;
-		}
 	}
+	/*
+	@media (max-width: $landscape-width) {
+		@include flexSelfCenterVertically;
+	}
+	*/
 }
 
 /* Navbar link */
@@ -47,25 +141,34 @@
 	padding: $navigation-link-padding;
 	@include flex();
 	@include flexAlignCenterVertically();
+	@include adaptiv-value-to("font-size", 14, 10, 767);
 	position: relative;
-	font-size: $navigation-link-font-size;
+
 	letter-spacing: $navigation-link-letter-spacing;
 	color: $navigation-link-font-color;
-	$background-color: #365edc;
-
 	border-bottom: solid 1px $navigation-link-border-color;
 	@include transition(color 0.3s);
-	text-transform: uppercase;
-	font-weight: 700;
-	&:visited {
-		color: $navigation-link-font-color;
+	@media (max-width: $landscape-width) {
+		&:visited {
+			color: $navigation-link-font-color;
+		}
 	}
-	&:hover {
-		background-color: #5073e1;
-	}
+
 	&.is-active {
-		background-color: #234ac7;
 	}
+	/**
+	* ! Added-------------------------
+	*/
+	& i[class^="icon-"].hide-on-portrait ~ span {
+		padding-left: 0 !important;
+	}
+	& i[class*=" icon-"].hide-on-portrait ~ span {
+		padding-left: 0 !important;
+	}
+
+	/**
+	* ! end Added---------------------------
+	*/
 	.navigation-item:last-child & {
 		@media (min-width: $landscape-width) {
 			border-top: none;
@@ -78,16 +181,14 @@
 	.navigation-item:not(.navigation-brand-text).is-active & {
 		text-decoration: none !important;
 		color: $navigation-link-font-color-hover;
-		background-color: #5073e1;
+		background-color: $navigation-link-background-color-hover;
 	}
 
 	@media (min-width: $landscape-width) {
+		height: 100%;
 		padding: $navigation-link-padding-landscape;
-		line-height: 1.33em;
+		line-height: $navigation-height;
 		border: none;
-		&:after {
-			height: 30px;
-		}
 	}
 
 	.navigation-menu.navigation-social-menu

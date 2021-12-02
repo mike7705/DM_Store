@@ -3,8 +3,32 @@
 <script src="js/vendors.min.js"></script>
 <script src="js/app.min.js"></script>
 <script>
-    var navigation = new Navigation(document.getElementById("navigation"), {
-        breakpoint: 768,
-        submenuTrigger: "click"
+    const navigation = new Navigation(document.getElementById("navigation"), {
+        breakpoint: 767,
+        submenuTrigger: "hover"
+    });
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        //direction: 'vertical',
+        loop: true,
+        lazy: true,
+        //height: 630,
+        autoplay: false,
+
+        // If we need pagination
+        //pagination: {
+        //    el: '.swiper-pagination',
+        //},
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        /*scrollbar: {
+            el: '.swiper-scrollbar',
+        },*/
     });
 </script>
