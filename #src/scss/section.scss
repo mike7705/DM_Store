@@ -95,7 +95,9 @@ section.main {
                         }
                     }
                     text-align: center;
-                    padding: 39px 10px 35px;
+                    padding-top: 10px;
+                    @include adaptiv-value("padding-left", 30, 15, 320);
+                    @include adaptiv-value("padding-right", 30, 15, 320);
                     & a.full-block-link {
                         display: block;
                         position: absolute;

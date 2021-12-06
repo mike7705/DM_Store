@@ -1,5 +1,5 @@
 <!-- Swiper -->
-<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/vendors.min.js"></script>
 <script src="js/app.min.js"></script>
 <script>
@@ -31,4 +31,36 @@
             el: '.swiper-scrollbar',
         },*/
     });
+    const swiperProductGallery = new Swiper('.product__gallery', {
+        //navigation: false,
+        //pagination: false,
+        //direction: 'horizontal',
+        //slideClass: 'product__gallery-item',
+        simulateTouch: false,
+        grabCursor: false,
+        watchOverflow: true,
+        slidesPerGroup: 1,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+        pagination: {
+            el: '.swiper-pagination',
+            bulletElement: 'div',
+            //draggable: false,
+        },
+        mousewheel: {
+            //eventsTarget: '.product__gallery-item',
+            releaseOnEdges: true,
+            sensitivity: 1,
+            clickable: true,
+        },
+        autoHeight: false,
+        slidesPerView: 1,
+        autoplay: false,
+        //preloadImages: false,
+        lazy: false,
+
+        // Эффекты переключения слайдов.
+        // Эффект потока
+        effect: 'creative',
+    })
 </script>

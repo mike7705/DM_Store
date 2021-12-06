@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="https://use.typekit.net/aus6ygi.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -628,76 +629,79 @@
                     </div>
                 </div>
             </div>
-            <div class="section__items products__items row">
+            <div class="section__items product__items row">
                 <div class="item product__item">
-                    <div class="item__icon product__gallery">
-                        <div class="product__gallery-wrapper">
-                            <div class="product__gallery-item">
-                                <img class="item__gallery-picture" src="img/9178950f771b9552b5f054decea8ea70.png"
-                                    alt="">
-                            </div>
-                            <div class="product__gallery-item">
-                                <img class="item__gallery-picture" src="img/9178950f771b9552b5f054decea8ea70.png"
-                                    alt="">
-                            </div>
-                            <div class="product__gallery-item">
-                                <img class="item__gallery-picture" src="img/9178950f771b9552b5f054decea8ea70.png"
-                                    alt="">
-                            </div>
-                            <div class="product__gallery-item">
-                                <img class="item__gallery-picture" src="img/9178950f771b9552b5f054decea8ea70.png"
-                                    alt="">
-                            </div>
-                            <div class="product__gallery-item">
-                                <img class="item__gallery-picture" src="img/9178950f771b9552b5f054decea8ea70.png"
-                                    alt="">
-                            </div>
+                    <div class="product__item-wrapper">
+                        <div class="product__gallery-outer">
+                            <div class=" swiper product__gallery">
+                                <div class="swiper-wrapper product__gallery-inner">
+                                    <div class="swiper-slide product__gallery-item">
+                                        <img class="gallery-item-picture swiper-lazy"
+                                            data-src="img/e078f1450e6c364442ae2b32605639dd.jpg" alt="">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                    <div class="swiper-slide product__gallery-item">
+                                        <img class="gallery-item-picture swiper-lazy"
+                                            data-src="img/9178950f771b9552b5f054decea8ea70.png" alt="">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                    <div class="swiper-slide product__gallery-item">
+                                        <img class="gallery-item-picture swiper-lazy"
+                                            data-src="img/c7fe397ba81b1cd0b89b1d1733d19c5f.jpg" alt="">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                    <div class="swiper-slide product__gallery-item">
+                                        <img class="gallery-item-picture swiper-lazy"
+                                            data-src="img/b3bb727579ef486319abed980897db66.jpg" alt="">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                    <div class="swiper-slide product__gallery-item">
+                                        <img class="gallery-item-picture swiper-lazy"
+                                            data-src="img/073548d472b50343ba3f92480f0dbd15.jpg" alt="">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-
                         </div>
-                    </div>
-                    <div class="item__text product__item-description">
-                        <a class="item__title" href="#">Телефоны </a>
-                        <div class="item__description hidden"></div>
-                    </div>
-                </div>
-                <div class="item shadow bordered">
-                    <div class="item__icon"><img src="img/9178950f771b9552b5f054decea8ea70.png" alt=""></div>
-                    <div class="item__text">
-                        <a class="item__title" href="#">Телефоны </a>
-                        <div class="item__description hidden"></div>
-                    </div>
-                </div>
-                <div class="item shadow bordered">
-                    <div class="item__icon"><img src="img/9178950f771b9552b5f054decea8ea70.png" alt=""></div>
-                    <div class="item__text">
-                        <a class="item__title" href="#">Телефоны </a>
-                        <div class="item__description hidden"></div>
-                    </div>
-                </div>
-                <div class="item shadow bordered">
-                    <div class="item__icon"><img src="img/9178950f771b9552b5f054decea8ea70.png" alt=""></div>
-                    <div class="item__text">
-                        <a class="item__title" href="#">Телефоны </a>
-                        <div class="item__description hidden"></div>
-                    </div>
-                </div>
-                <div class="item shadow bordered">
-                    <div class="item__icon"><img src="img/9178950f771b9552b5f054decea8ea70.png" alt=""></div>
-                    <div class="item__text">
-                        <a class="item__title" href="#">Телефоны </a>
-                        <div class="item__description hidden"></div>
-                    </div>
-                </div>
-                <div class="item shadow bordered">
-                    <div class="item__icon"><img src="img/9178950f771b9552b5f054decea8ea70.png" alt=""></div>
-                    <div class="item__text">
-                        <a class="item__title" href="#">Телефоны </a>
-                        <div class="item__description hidden"></div>
+                        pagination"></div>
+                            </div>
+                            <div class="item__text product__item-description">
+                                <a class="item__title" href="#">Телефоны </a>
+                                <div class="item__description hidden"></div>
+                            </div>
+
+                        </div>
+                        <div class="item__footer"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </section>
+<div class="container1">
+    <div class="content1">TEXT</div>
+</div>
+
+<style>
+    .container1 {
+        background-color: #fe0;
+        width: 25%;
+        position: relative;
+    }
+
+    .container1:after {
+        content: "";
+        padding-top: 100%;
+        display: block;
+    }
+
+    .content1 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+</style>
 		<main class="page">
 			<div class="_container">
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, necessitatibus! Tenetur tempora
@@ -773,7 +777,7 @@
 	</div>
 </div>
 	<!-- Swiper -->
-<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/vendors.min.js"></script>
 <script src="js/app.min.js"></script>
 <script>
@@ -805,6 +809,38 @@
             el: '.swiper-scrollbar',
         },*/
     });
+    const swiperProductGallery = new Swiper('.product__gallery', {
+        //navigation: false,
+        //pagination: false,
+        //direction: 'horizontal',
+        //slideClass: 'product__gallery-item',
+        simulateTouch: false,
+        grabCursor: false,
+        watchOverflow: true,
+        slidesPerGroup: 1,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+        pagination: {
+            el: '.swiper-pagination',
+            bulletElement: 'div',
+            //draggable: false,
+        },
+        mousewheel: {
+            //eventsTarget: '.product__gallery-item',
+            releaseOnEdges: true,
+            sensitivity: 1,
+            clickable: true,
+        },
+        autoHeight: false,
+        slidesPerView: 1,
+        autoplay: false,
+        //preloadImages: false,
+        lazy: false,
+
+        // Эффекты переключения слайдов.
+        // Эффект потока
+        effect: 'creative',
+    })
 </script>
 </body>
 
