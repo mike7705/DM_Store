@@ -7,7 +7,7 @@
         breakpoint: 767,
         submenuTrigger: "hover"
     });
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.swiper._main-slider', {
         // Optional parameters
         //direction: 'vertical',
         loop: true,
@@ -32,20 +32,22 @@
         },*/
     });
     const swiperProductGallery = new Swiper('.product__gallery', {
-        //navigation: false,
-        //pagination: false,
-        //direction: 'horizontal',
-        //slideClass: 'product__gallery-item',
-        simulateTouch: false,
+        navigation: false,
+        loop: false,
+        direction: 'horizontal',
+        simulateTouch: true,
         grabCursor: false,
         watchOverflow: true,
-        slidesPerGroup: 1,
-        centeredSlides: true,
-        centeredSlidesBounds: true,
+        centeredSlides: false,
+        centeredSlidesBounds: false,
+        zoom: false,
+        spaceBeetween: 10,
+        loopedSlides: 0,
         pagination: {
             el: '.swiper-pagination',
             bulletElement: 'div',
-            //draggable: false,
+            clickable: true,
+
         },
         mousewheel: {
             //eventsTarget: '.product__gallery-item',
@@ -53,10 +55,10 @@
             sensitivity: 1,
             clickable: true,
         },
-        autoHeight: false,
+
         slidesPerView: 1,
-        autoplay: false,
-        //preloadImages: false,
+
+        preloadImages: true,
         lazy: false,
 
         // Эффекты переключения слайдов.

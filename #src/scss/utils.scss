@@ -273,8 +273,22 @@
     text-transform: uppercase;
     letter-spacing: 0.8px;
 }
+.font-small {
+    font-size: 0.8em;
+    line-height: 1.692em;
+}
+.font-small2 {
+    font-size: 0.933em;
+    line-height: 1.501em;
+}
+.font-bold {
+    font-weight: bold;
+}
 .gray {
     color: #999;
+}
+.b-radius-1 {
+    border-radius: 1px;
 }
 .b-radius-2 {
     border-radius: 2px;
