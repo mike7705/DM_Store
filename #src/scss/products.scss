@@ -2,28 +2,83 @@
     //min-width: 0;
     .product__gallery-item {
         text-align: center;
+        //@include adaptiv-value-to("padding", 15, 5, 145);
     }
     .product__gallery-item img {
         max-width: 100%;
-        object-fit: contain;
+        //object-fit: contain;
     }
 }
 .products {
+    background-color: #f8f8f8;
     & .product__items {
         @include adaptiv-value-to("font-size", 16, 14, 320);
+        &.section__items {
+            justify-content: left !important;
+        }
         & .product__item {
+            &:hover {
+                background: #fff;
+                -webkit-transition: box-shadow ease-out 0.2s;
+                -moz-transition: box-shadow ease-out 0.2s;
+                -o-transition: box-shadow ease-out 0.2s;
+                transition: box-shadow ease-out 0.2s;
+                transition-property: box-shadow;
+                transition-duration: 0.2s;
+                transition-timing-function: ease-out;
+                transition-delay: 0s;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                white-space: normal;
+                padding: 20px 19px 26px 20px;
+                //min-height: 100%;
+            }
+            &.item {
+                @media (min-width: $minWidth) and (max-width: $md4 + px) {
+                    width: 50%;
+                }
+                @media (min-width: $md4 + px) and (max-width: $md3 + px) {
+                    width: 33.33333%;
+                    &.double {
+                        width: 66.6666%;
+                    }
+                }
+                @media (min-width: $md3 + px) and (max-width: $md1 + px) {
+                    width: 25%;
+                    &.double {
+                        width: 50%;
+                    }
+                }
+                /*
+                @media (min-width: $md2 + px) and (max-width: $md1 + px) {
+                    width: 12.5%;
+                    &.double {
+                        width: 25%;
+                    }
+                }
+*/
+                @media (min-width: $md1 + px) {
+                    width: 25%;
+                    &.double {
+                        width: 50%;
+                    }
+                }
+            }
+            border-right: 1px solid #f8f8f8;
+            border-bottom: 1px solid #f8f8f8;
+            border-collapse: collapse;
             min-width: 10.28em;
             min-height: 350px;
-
-            @include adaptiv-value-to("padding-left", 25, 19, 320);
-            @include adaptiv-value-to("padding-right", 25, 19, 320);
-            @include adaptiv-value-to("padding-top", 25, 19, 320);
+            @include adaptiv-value-to("padding-left", 25, 19, 145);
+            @include adaptiv-value-to("padding-right", 25, 19, 145);
+            @include adaptiv-value-to("padding-top", 25, 19, 145);
             position: relative;
-            //
+            background-color: #fff;
             & .product__item-container {
                 width: 100%;
                 min-height: 100%;
-                height: 1px;
                 @include flex;
                 @include flexColumnReverse;
                 position: relative;
@@ -35,19 +90,24 @@
                 //top: 0;
                 //left: 0;
                 &::before {
+                    /*
                     content: "";
                     display: block;
                     margin-top: 25%;
+                    */
                 }
                 & .product__gallery-outer {
                     width: 100%;
+                    position: relative;
+                    /*
                     position: absolute;
                     top: 0;
                     left: 0;
+                    */
                     overflow: hidden;
                     &::after {
                         content: "";
-                        padding-top: 100%;
+                        //padding-top: 100%;
                         display: block;
                     }
                     & .product__gallery {
@@ -83,7 +143,7 @@
                     @include flexColumn;
                     @include flexAlignBetween;
                     padding-bottom: 30px;
-
+                    height: 150px;
                     & .top-block {
                         & .item-raiting {
                             height: 20px;

@@ -5,7 +5,7 @@ section.main {
     margin: 0;
     //background-color: #f8f8f8;
     font-size: 14px;
-    //border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
     & .section__container {
         height: 100%;
         margin: 0 auto;
@@ -65,7 +65,7 @@ section.main {
                 width: 100%;
                 & .item {
                     position: relative;
-                    width: 25%;
+                    //width: 25%;
                     @media (min-width: $minWidth) and (max-width: $md4 + px) {
                         width: 100%;
                     }
@@ -87,18 +87,18 @@ section.main {
                             width: 50%;
                         }
                     }
-                    /*
+
                     @media (min-width: $md1 + px) and (max-width: $maxWidthContainer + px) {
                         width: 16.6666%;
                         &.double {
                             width: 33.33333%;
                         }
                     }
-                    */
+
                     text-align: center;
                     padding-top: 10px;
-                    @include adaptiv-value("padding-left", 30, 15, 320);
-                    @include adaptiv-value("padding-right", 30, 15, 320);
+                    @include adaptiv-value-to("padding-left", 30, 5, 145);
+                    @include adaptiv-value-to("padding-right", 30, 5, 145);
                     & a.full-block-link {
                         display: block;
                         position: absolute;
