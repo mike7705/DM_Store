@@ -215,10 +215,10 @@ body {
 	@media (max-width: $md1 + px) {
 		max-width: 970px;
 	}
-	@media (max-width: $md2+px) {
+	@media (max-width: $md2 + px) {
 		max-width: 750px;
 	}
-	@media (max-width: $md3+px) {
+	@media (max-width: $md3 + px) {
 		max-width: none;
 		padding: 0 10px;
 	}
@@ -229,6 +229,7 @@ body {
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 @import "forms";
 @import "ui";
+@import "custom";
 @import "navigation";
 @import "swiper-bundle";
 @import "raiting";
@@ -244,11 +245,13 @@ body {
 @import "features";
 @import "section";
 @import "products";
+@import "main";
 @import "popup";
 @import "header";
 @import "footer";
 @import "home";
 @import "utils";
+
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================

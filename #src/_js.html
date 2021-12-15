@@ -65,4 +65,54 @@
         // Эффект потока
         effect: 'creative',
     })
+    let swiperGreatDeals = new Swiper('.categories__slider', {
+        navigation: false,
+        loop: false,
+        direction: 'horizontal',
+        simulateTouch: true,
+        zoom: false,
+        touchRatio: 1,
+        touchAngle: 45,
+        grabCursor: true,
+        slideToClickedSlide: false,
+        watchOverflow: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            hiddenClass: '_hidden',
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+            pageUpDown: true,
+        },
+        mousewheel: {
+            //eventsTarget: '.product__gallery-item',
+            releaseOnEdges: true,
+            sensitivity: 1,
+            clickable: true,
+        },
+        slidesPerView: 1,
+
+        //breakpointsBase: 'container',
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+            },
+            480: {
+                slidesPerView: 3,
+            },
+            767: {
+                slidesPerView: 4,
+            },
+            1100: {
+                slidesPerView: 5,
+            }
+        },
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        preloadImages: false,
+        lazy: false,
+    })
 </script>

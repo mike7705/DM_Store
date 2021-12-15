@@ -1,0 +1,26 @@
+// Custom.scss
+// Вариант Б. Включите части Bootstrap
+
+// 1. Сначала включите функции (чтобы Вы могли управлять цветами, SVG, вычислением и т.д.)
+@import "bootstrap/scss/functions";
+
+// 2. Включите сюда любые переопределения переменных по умолчанию
+
+// 3. Включите оставшуюся часть необходимых таблиц стилей Bootstrap
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+// 4. Включите любой необязательный Bootstrap CSS по мере необходимости
+//@import "../bootstrap/scss/utilities";
+//@import "../bootstrap/scss/reboot";
+//@import "../bootstrap/scss/type";
+//@import "../bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+//@import "../bootstrap/scss/helpers";
+
+// 5. При желании можно в последнюю очередь включить служебный API для генерации классов на основе карты Sass в `_utililies.scss`
+//@import "../bootstrap/scss/utilities/api";
+
+// 6. Добавьте сюда дополнительный пользовательский код

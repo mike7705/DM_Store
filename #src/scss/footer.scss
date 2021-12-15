@@ -1,5 +1,165 @@
 footer {
+    background: #333;
+    font-size: 15px;
+    color: white;
+    & .footer-inner {
+        position: relative;
+        margin: 0px;
+        padding: 59px 0 64px;
+    }
+    & .footer_top {
+        padding-bottom: 70px;
+        & .footer_top-content {
+            padding: 0px 30px;
+            margin: 0 auto;
+            background: none;
+            float: none;
+            &::before {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            & .footer .bottom-menu {
+                margin: -5px 0 0;
+            }
+            & .bottom-menu.second .item {
+                margin: 20px 0 0;
+            }
+            & .bottom-menu .item .title {
+                font-size: 0.867em;
+                font-weight: bold;
+                line-height: 1.5385em;
+                text-transform: uppercase;
+                letter-spacing: 0.8px;
+            }
+            & .bottom-menu .wrap .item .title {
+                font-weight: normal;
+                text-transform: none;
+                letter-spacing: 0;
+            }
+        }
+    }
+    .footer_middle {
+        margin-bottom: 42px;
+    }
+    & .bottom-menu .wrap .item .title a {
+        color: #999999;
+    }
+    & .bottom-menu .item .title a {
+        color: #fff;
+    }
+    & .info {
+        color: #ffffff;
+    }
+    & .bottom-menu .wrap .item .title a:hover {
+        opacity: 1;
+        color: #fff;
+    }
+    & .bottom-menu .wrap .item .title a {
+        color: #999999;
+    }
+    & .bottom-menu .item .title a:hover {
+        opacity: 0.5;
+    }
+    & .bottom-menu .item .title a {
+        color: #fff;
+    }
+    & .phone {
+        display: inline-block;
+        white-space: nowrap;
+        vertical-align: top;
+    }
+    & .info .phone.blocks .phone.with_dropdown {
+        margin-right: 7px;
+        display: inline-block;
+    }
+    & .info .phone.blocks .phone {
+        position: relative;
+        margin: 0 19px 0 0;
+        white-space: nowrap;
+        padding-right: 0 !important;
+    }
+    & .info .phone.blocks {
+        margin: 0 0 14px;
+        white-space: normal;
+    }
+    & .phone {
+        display: inline-block;
+        white-space: nowrap;
+        vertical-align: top;
+    }
+    & .info .email {
+        margin: 0 0 22px;
+        line-height: 1.3333em;
+        padding: 0 0 0 29px;
+        position: relative;
+        display: inline-block;
+    }
+    & .info .subscribe_button {
+        margin: 0 9px 35px 0px;
+    }
+    & .info .phone.blocks .phone .svg.svg-inline-down {
+        right: 0px;
+        margin-top: -2px;
+    }
+    & .info .email .svg {
+        top: 6px;
+        left: 0px;
+    }
+    & .info .svg {
+        position: absolute;
+        opacity: 0.5;
+    }
+    & .with_dropdown .svg-inline-down {
+        position: absolute;
+        right: 3px;
+        top: 50%;
+        margin: -2px 0px 0px;
+        width: 5px;
+        height: 3px;
+        display: block;
+    }
+    footer .address.blocks {
+        padding-right: 20px;
+    }
+    footer .info .address {
+        position: relative;
+        padding: 0 0 0 29px;
+        line-height: 1.3333em;
+        color: #fff;
+        display: inline-block;
+    }
+    .wrapper_inner,
+    .maxwidth-theme {
+        padding: 0px 30px;
+        margin: 0 auto;
+        background: #fff;
+
+        float: none;
+    }
+    & .info .subscribe_button {
+        margin: 0 9px 35px 0px;
+    }
+    & .info .subscribe_button .btn {
+        position: relative;
+        display: block;
+        padding: 15px 45px 14px 18px;
+        white-space: normal;
+        background: #494949;
+        border-color: #494949;
+        text-align: left;
+        letter-spacing: 0.8px;
+        cursor: pointer;
+    }
+    & .info .subscribe_button .btn:hover {
+        background-color: #5073e1;
+        border-color: #5073e1;
+    }
+    & .info .subscribe_button .btn:hover {
+        color: #fff;
+    }
 }
+
 //====================================================================================================
 
 //====================================================================================================

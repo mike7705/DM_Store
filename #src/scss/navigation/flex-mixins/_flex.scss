@@ -1,62 +1,64 @@
-
 // Flex
-@mixin flex{
+@mixin flex {
     display: -ms-flexbox;
     display: flex;
 }
 
 // Inline Flex
-@mixin inlineFlex{
+@mixin inlineFlex {
     display: -ms-inline-flexbox;
     display: inline-flex;
 }
 
 // Flex horizontal row
-@mixin flexRow{
+@mixin flexRow {
     -ms-flex-direction: row;
     flex-direction: row;
 }
-
+@mixin flexRowReverse {
+    -ms-flex-direction: row-reverse !important;
+    flex-direction: row-reverse !important;
+}
 // Flex column
-@mixin flexColumn{
+@mixin flexColumn {
     -ms-flex-direction: column;
-    flex-direction: column;	
+    flex-direction: column;
 }
 
 // Flex column reverse
-@mixin flexColumnReverse{
-    -ms-flex-direction: column-reverse!important;
-    flex-direction: column-reverse!important;
+@mixin flexColumnReverse {
+    -ms-flex-direction: column-reverse !important;
+    flex-direction: column-reverse !important;
 }
 
 // HORIZONTAL ALIGNMENT ---
 
 // Align to LEFT
-@mixin flexAlignLeft{
+@mixin flexAlignLeft {
     -ms-flex-pack: start;
-    justify-content: flex-start;	
+    justify-content: flex-start;
 }
 
 // Align to RIGHT
-@mixin flexAlignRight{
+@mixin flexAlignRight {
     -ms-flex-pack: end;
-    justify-content: flex-end;	
+    justify-content: flex-end;
 }
 
 // Align to CENTER
-@mixin flexAlignCenter{
+@mixin flexAlignCenter {
     -ms-flex-pack: center;
     justify-content: center;
 }
 
 // Align with space BETWEEN
-@mixin flexAlignBetween{
+@mixin flexAlignBetween {
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 // Align with space AROUND
-@mixin flexAlignAround{
+@mixin flexAlignAround {
     -ms-flex-pack: distribute;
     justify-content: space-around;
 }
@@ -64,25 +66,25 @@
 // VERTICAL ALIGNMENT ---
 
 // Align vertically to top
-@mixin flexAlignTop{
+@mixin flexAlignTop {
     -ms-flex-align: start;
     align-items: flex-start;
 }
 
 // Align vertically to bottom
-@mixin flexAlignBottom{
+@mixin flexAlignBottom {
     -ms-flex-align: end;
     align-items: flex-end;
 }
 
 // Align vertically to center
-@mixin flexAlignCenterVertically{
-	-ms-flex-align: center;
+@mixin flexAlignCenterVertically {
+    -ms-flex-align: center;
     align-items: center;
 }
 
 // Vertically stretch
-@mixin flexStretch{
+@mixin flexStretch {
     -ms-flex-align: stretch;
     align-items: stretch;
 }
@@ -90,36 +92,13 @@
 // SELF ALIGNMENT ---
 
 // Self stretch
-@mixin flexSelfStretch{
+@mixin flexSelfStretch {
     -ms-flex-item-align: stretch;
     align-self: stretch;
 }
 
 // Self vertically center align
-@mixin flexSelfCenterVertically{
+@mixin flexSelfCenterVertically {
     -ms-flex-item-align: center;
     align-self: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
