@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('_head.html',{
-"title":"Главная"
+@@include('_head_bootstrap.html',{
+"title":"Категория"
 })
 
 <body>
 	<div class="wrapper">
-		@@include('_header.html',{})
-		@@include('_slider.html',{})
-		@@include('_banners.html',{})
-		@@include('_features.html',{})
-		@@include('_categories.html',{})
-		@@include('_products.html',{})
-		@@include('_main.html',{})
+		@@include('_header2.html',{})
 		<main class="page">
-			<div class="_container">
-
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h1 class="pt-5">Кнопочные телефоны <span
+								class="badge bg-transparent border rounded rounded-sm fs-6">New</span>
+						</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#">Home</a></li>
+								<li class="breadcrumb-item"><a href="#">Library</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Data</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
 			</div>
 		</main>
 		@@include('_footer.html',{})

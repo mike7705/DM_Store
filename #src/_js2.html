@@ -1,0 +1,121 @@
+<!-- Swiper -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/vendors.min.js"></script>
+<script src="js/app.min.js"></script>
+<script>
+    const navigation = new Navigation(document.getElementById("navigation"), {
+        breakpoint: 767,
+        submenuTrigger: "hover"
+    });
+    const swiper = new Swiper('.swiper._main-slider', {
+        // Optional parameters
+        //direction: 'vertical',
+        loop: true,
+        lazy: true,
+        //height: 630,
+        autoplay: false,
+
+        // If we need pagination
+        //pagination: {
+        //    el: '.swiper-pagination',
+        //},
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        /*scrollbar: {
+            el: '.swiper-scrollbar',
+        },*/
+    });
+    const swiperProductGallery = new Swiper('.product__gallery', {
+        navigation: false,
+        loop: false,
+        direction: 'horizontal',
+        simulateTouch: true,
+        grabCursor: false,
+        watchOverflow: true,
+        centeredSlides: false,
+        centeredSlidesBounds: false,
+        zoom: false,
+        spaceBeetween: 10,
+        loopedSlides: 0,
+        pagination: {
+            el: '.swiper-pagination',
+            bulletElement: 'div',
+            clickable: true,
+
+        },
+        mousewheel: {
+            //eventsTarget: '.product__gallery-item',
+            releaseOnEdges: true,
+            sensitivity: 1,
+            clickable: true,
+        },
+
+        slidesPerView: 1,
+
+        preloadImages: true,
+        lazy: false,
+
+        // Эффекты переключения слайдов.
+        // Эффект потока
+        effect: 'creative',
+    })
+    let swiperGreatDeals = new Swiper('.categories__slider', {
+        navigation: false,
+        loop: false,
+        direction: 'horizontal',
+        simulateTouch: true,
+        zoom: false,
+        touchRatio: 1,
+        touchAngle: 45,
+        grabCursor: true,
+        slideToClickedSlide: false,
+        watchOverflow: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            hiddenClass: '_hidden',
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+            pageUpDown: true,
+        },
+        mousewheel: {
+            //eventsTarget: '.product__gallery-item',
+            releaseOnEdges: true,
+            sensitivity: 1,
+            clickable: true,
+        },
+        slidesPerView: 1,
+
+        //breakpointsBase: 'container',
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+            },
+            480: {
+                slidesPerView: 3,
+            },
+            767: {
+                slidesPerView: 4,
+            },
+            1100: {
+                slidesPerView: 5,
+            }
+        },
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        preloadImages: false,
+        lazy: false,
+    })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>

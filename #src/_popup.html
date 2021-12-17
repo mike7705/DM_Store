@@ -1,18 +1,60 @@
-<div class="popup popup_popup">
+<div class="popup popup_search" id="search">
 	<div class="popup__content">
 		<div class="popup__body">
 			<div class="popup__close"></div>
+			<div class="popup__text">
+				<form action="" method="get" class="form">
+					<div class="form_body">
+						<div class="form-control input-group">
+							<input type="text" class="input form-control mb-0" name="query" value="[[+mse2_query]]" />
+							<button type="submit" class="btn btn-lg btn-default">Искать!</button>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>
-<div class="popup popup_popup" id="callback">
+<div class="popup popup_callback" id="callback">
 	<div class="popup__content">
 		<div class="popup__body">
 			<div class="popup__close"></div>
 			<div class="popup__title">
 				<h2>Заказать звонок</h2>
 			</div>
-			<div class="popup__text"></div>
+			<div class="popup__text">
+				<form class="form">
+					<input type="hidden" name="AJAX_CALL" value="Y">
+					<input type="hidden" name="sessid" id="sessid" value="">
+					<input type="hidden" name="WEB_FORM_ID" value="6">
+					<div class="form_body">
+						<div class="form-control">
+							<label><span>Ваше имя&nbsp;<span class="star">*</span></span></label>
+							<input type="text" class="input" required="" name="form_text_27" value=""
+								aria-required="true">
+						</div>
+						<div class="form-control">
+							<label><span>Телефон&nbsp;<span class="star">*</span></span></label>
+							<input type="text" class="input phone" required="" name="form_text_28" value=""
+								aria-required="true">
+						</div>
+						<div class="clearboth"></div>
+						<textarea name="nspm" style="display:none;"></textarea>
+						<div class="clearboth"></div>
+					</div>
+					<div class="form_footer">
+						<div class="licence_block filter onoff label_block">
+							<input type="checkbox" id="licenses_popup" name="licenses_popup" required="" value="Y"
+								aria-required="true">
+							<label for="licenses_popup">
+								Я согласен на <a href="/include/licenses_detail.php" target="_blank">обработку
+									персональных данных</a> </label>
+						</div>
+						<button type="submit" class="btn btn-lg btn-default"><span>Отправить</span></button>
+						<input type="hidden" class="btn btn-default" value="Отправить" name="web_form_submit">
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>

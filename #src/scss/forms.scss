@@ -121,6 +121,118 @@
 }
 //</SELECT>====================================================================================================
 
+//<POPUP (inp+popup)>====================================================================================================
+.popup .popup__text .form .form_body {
+	margin: 0;
+	padding-top: 29px;
+}
+.form .form_body {
+	margin: 0 0 9px;
+	position: relative;
+}
+.popup div.form-control,
+.form_body div.form-control,
+.middle_info .sku_props .form-control {
+	background-color: #fff;
+	background-color: var(--black_bg_black);
+	border: 0px solid #d5dadc;
+	box-shadow: none;
+	border-radius: 0px;
+	height: auto;
+	padding: 0px;
+}
+.popup .form-control {
+	margin: 0px 0px 25px;
+}
+div.form-control {
+	border: none;
+	background: none;
+	box-shadow: none;
+	padding: 0px;
+	height: auto;
+}
+.form-control {
+	position: relative;
+	margin-bottom: 19px;
+}
+.form-control {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #555555;
+	vertical-align: middle;
+	background-color: #ffffff;
+	background-image: none;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.popup .input {
+	padding: 8px 13px 7px;
+	width: 100%;
+	height: 48px;
+	background-color: rgb(248, 248, 248);
+	border: 1px solid #ececec;
+	&:focus {
+		background-color: rgb(254, 254, 254);
+	}
+}
+.popup div.form-control label,
+.form_body div.form-control label {
+	font-weight: 400;
+	color: #888888;
+}
+.form-control label {
+	display: block;
+	font-size: 13px;
+	margin-bottom: 6px;
+	font-weight: normal;
+}
+form label {
+	font-weight: normal;
+	font-size: 13px;
+	margin-bottom: 2px;
+}
+label {
+	display: inline-block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+.form-control label .star {
+	margin: 0;
+	top: 0px;
+}
+form .star,
+.order-checkout .sof-req,
+body span.bx-authform-starrequired,
+form .required-star {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 0;
+	margin: 0 0 0 4px;
+	position: relative;
+	color: #ff0000;
+}
+.filter.licence_block,
+.filter.offer_block {
+	padding: 0px 0px 26px;
+	position: relative;
+	margin: -10px 0px 0px;
+}
+.popup .form .form_footer {
+	padding: 0 0px 25px;
+	display: block;
+}
+.form .form_footer {
+	margin: 0 0 35px 0;
+	display: inline-block;
+}
 //<INPUT (inp+tab)>====================================================================================================
 input[type="text"],
 input[type="email"],
@@ -133,6 +245,7 @@ textarea {
 		outline: none;
 	}
 }
+
 .input {
 	border-radius: 0 !important;
 	width: 100%;
