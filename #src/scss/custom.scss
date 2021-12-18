@@ -31,9 +31,12 @@ $cyan: #2992d9;
 
 $primary: #365edc;
 $secondary: #555555;
+$gray-100: #f8f9fa;
 $gray-111: #111111;
 $gray-333: #333333;
+$gray-555: #555555;
 $gray-666: #666666;
+$gray-999: #666666;
 $light: #111111;
 $dark: #666666;
 
@@ -115,8 +118,10 @@ $container-max-widths: (
 $font-family-sans-serif: "Montserrat", system-ui, -apple-system, "Helvetica", Arial, sans-serif;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
-$font-size-base: 1rem;
+$font-size-base: 1.1rem;
 $font-size-xs: $font-size-base * 0.67;
+$font-size-sm: $font-size-base * 0.875;
+$font-size-lg: $font-size-base * 1.25;
 
 $line-height-base: 1.2;
 $line-height-sm: 1.05;
@@ -166,6 +171,10 @@ $list-group-color: $gray-555;
 $list-group-border-color: #ececec;
 $list-group-border-width: 1px;
 // scss-docs-start list-group-variables
+
+$box-shadow-hover: 0 0.5rem 1rem rgba(#000, 0.15);
+$box-shadow-hover-sm: 0 0.125rem 0.25rem rgba(#000, 0.075);
+$box-shadow-hover-lg: 0 1rem 3rem rgba(#000, 0.175);
 
 $breadcrumb-divider: "\2014";
 // 3. Включите оставшуюся часть необходимых таблиц стилей Bootstrap

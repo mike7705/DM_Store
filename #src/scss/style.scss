@@ -190,3 +190,42 @@ body {
 //===================================================================================================================================
 
 //</breadcrumbs>====================================================================================================
+
+// .sub-category ====================================================================================================
+.category__description {
+	& .sub-categories {
+		width: 100%;
+		& .sub-category-item {
+			display: table-cell;
+			border-collapse: collapse;
+			padding: 1.5rem;
+			border-top: 1px solid #ececec;
+			border-left: none;
+			border-right: 1px solid #ececec;
+			border-bottom: 1px solid #ececec;
+			&:first-child {
+				border-left: 1px solid #ececec;
+			}
+			&:hover {
+				box-shadow: $box-shadow-hover-lg;
+				border-color: #fff;
+			}
+			& .sub-category-link {
+				line-height: 20px;
+			}
+			& .sub-category-description {
+				color: $gray-999;
+				font-size: 0.667em;
+				line-height: 1.3em;
+				text-transform: uppercase;
+				letter-spacing: 0.8px;
+			}
+		}
+	}
+	& .category-description-text p {
+		font-size: 1.2rem;
+		line-height: $line-height-lg;
+	}
+}
+
+// .sub-category ====================================================================================================
