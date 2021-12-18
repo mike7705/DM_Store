@@ -5,10 +5,174 @@
 @import "bootstrap/scss/functions";
 
 // 2. Включите сюда любые переопределения переменных по умолчанию
+// Colors --------------------------------------------------------
+$my-grays: (
+    "999": #999999,
+    "888": #888888,
+    "777": #777777,
+    "666": #666666,
+    "555": #555555,
+    "444": #444444,
+    "333": #333333,
+    "222": #222222,
+    "111": #111111,
+);
 
+$blue: #365edc;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #fc2a4b;
+$orange: #e6c553;
+$yellow: #ffd83a;
+$green: #5fa800;
+$teal: #60c339;
+$cyan: #2992d9;
+
+$primary: #365edc;
+$secondary: #555555;
+$gray-111: #111111;
+$gray-333: #333333;
+$gray-666: #666666;
+$light: #111111;
+$dark: #666666;
+
+$theme-colors: (
+    "primary": #365edc,
+    "purple": #893ca9,
+    "red": #fc2a4b,
+    "orange": #e6c553,
+    "yellow": #ffd83a,
+    "green": #5fa800,
+    "teal": #60c339,
+    "cyan": #2992d9,
+);
+
+// Colors --------------------------------------------------------
+
+// Options
+$enable-shadows: true;
+$enable-gradients: true;
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 2.5,
+    6: $spacer * 3,
+    7: $spacer * 5,
+);
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-color: $gray-666;
+$body-text-align: left;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $gray-333;
+$link-decoration: none;
+$link-hover-color: $primary;
+$link-hover-decoration: null;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 480px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+// scss-docs-start container-max-widths
+$container-max-widths: (
+    sm: 440px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px,
+);
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// scss-docs-start font-variables
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: "Montserrat", system-ui, -apple-system, "Helvetica", Arial, sans-serif;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+// stylelint-enable value-keyword-case
+$font-size-base: 1rem;
+$font-size-xs: $font-size-base * 0.67;
+
+$line-height-base: 1.2;
+$line-height-sm: 1.05;
+$line-height-lg: 1.5;
+
+$h1-font-size: $font-size-base * 2;
+$h2-font-size: $font-size-base * 1.8;
+$h3-font-size: $font-size-base * 1.6;
+$h4-font-size: $font-size-base * 1.4;
+$h5-font-size: $font-size-base * 1.2;
+
+// scss-docs-start headings-variables
+$headings-font-weight: 400;
+$headings-line-height: 1.2;
+$headings-color: $gray-333;
+// scss-docs-end headings-variables
+
+// scss-docs-start dropdown-variables
+$dropdown-min-width: 15rem;
+$dropdown-padding-x: 0.5rem;
+$dropdown-padding-y: 0.5rem;
+
+$dropdown-font-size: $font-size-sm;
+$dropdown-border-color: #ececec;
+$dropdown-border-radius: 3px;
+$dropdown-divider-bg: $gray-100;
+/*
+$dropdown-link-color: $gray-333;
+$dropdown-link-hover-color: shade-color($dropdown-link-color, 10%) !default;
+$dropdown-link-hover-bg: $gray-200 !default;
+
+$dropdown-link-active-color: $component-active-color !default;
+$dropdown-link-active-bg: $component-active-bg !default;
+
+$dropdown-link-disabled-color: $gray-500 !default;
+
+$dropdown-item-padding-y: $spacer * 0.25 !default;
+$dropdown-item-padding-x: $spacer !default;
+
+$dropdown-header-color: $gray-600 !default;
+$dropdown-header-padding: $dropdown-padding-y $dropdown-item-padding-x !default;
+*/
+// scss-docs-end dropdown-variables
+
+// scss-docs-start list-group-variables
+$list-group-color: $gray-555;
+$list-group-border-color: #ececec;
+$list-group-border-width: 1px;
+// scss-docs-start list-group-variables
+
+$breadcrumb-divider: "\2014";
 // 3. Включите оставшуюся часть необходимых таблиц стилей Bootstrap
+
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
+$grays: map-merge($grays, $my-grays);
 @import "bootstrap/scss/root";
 
 // 4. Включите любой необязательный Bootstrap CSS по мере необходимости
@@ -19,6 +183,8 @@
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
 @import "bootstrap/scss/forms";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/card";
 @import "bootstrap/scss/helpers";
 
 // 5. При желании можно в последнюю очередь включить служебный API для генерации классов на основе карты Sass в `_utililies.scss`

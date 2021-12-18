@@ -25,6 +25,7 @@
   @extend h6;
 }
 
+
 .lead {
   @include font-size($lead-font-size);
   font-weight: $lead-font-weight;
@@ -43,11 +44,11 @@
 // Emphasis
 //
 .small {
-  @extend small !optional;
+  @extend small;
 }
 
 .mark {
-  @extend mark !optional;
+  @extend mark;
 }
 
 //
@@ -69,6 +70,7 @@
     margin-right: $list-inline-padding;
   }
 }
+
 
 //
 // Misc
