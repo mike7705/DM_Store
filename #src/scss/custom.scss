@@ -40,8 +40,9 @@ $gray-999: #666666;
 $light: #111111;
 $dark: #666666;
 
-$theme-colors: (
+$theme-color: (
     "primary": #365edc,
+    /*
     "purple": #893ca9,
     "red": #fc2a4b,
     "orange": #e6c553,
@@ -49,10 +50,13 @@ $theme-colors: (
     "green": #5fa800,
     "teal": #60c339,
     "cyan": #2992d9,
+    */
 );
 
 // Colors --------------------------------------------------------
-
+$aspect-ratio: (
+    "2x3": calc(3 / 2 * 100%),
+);
 // Options
 $enable-shadows: true;
 $enable-gradients: true;
@@ -73,7 +77,7 @@ $spacers: (
 // Body
 //
 // Settings for the `<body>` element.
-
+$body-bg: #fff;
 $body-color: $gray-666;
 $body-text-align: left;
 
@@ -177,26 +181,59 @@ $box-shadow-hover-sm: 0 0.125rem 0.25rem rgba(#000, 0.075);
 $box-shadow-hover-lg: 0 1rem 3rem rgba(#000, 0.175);
 
 $breadcrumb-divider: "\2014";
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+// scss-docs-start accordion-variables
+$accordion-padding-y: 0;
+$accordion-padding-x: 0;
+$accordion-button-color: $body-color;
+$accordion-button-bg: $body-bg;
+$accordion-transition: $btn-transition, border-radius 0.5s ease;
+$accordion-button-active-bg: $body-bg;
+$accordion-button-active-color: $body-color;
+$accordion-button-focus-border-color: $primary;
+$accordion-button-focus-box-shadow: unset;
+
+//btn
+//$btn-active-box-shadow: none;
+//$btn-focus-width: none;
+//$btn-box-shadow: none;
+$btn-active-border-shade-amount: 0;
+$btn-active-border-tint-amount: 0;
+$caret-width: 0.4em;
+
 // 3. Включите оставшуюся часть необходимых таблиц стилей Bootstrap
 
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
+
+$aspect-ratios: map-merge($aspect-ratios, $aspect-ratio);
 $grays: map-merge($grays, $my-grays);
+$theme-colors: map-merge($theme-colors, $theme-color);
+
 @import "bootstrap/scss/root";
 
 // 4. Включите любой необязательный Bootstrap CSS по мере необходимости
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/reboot";
 @import "bootstrap/scss/type";
+@import "bootstrap/scss/transitions";
 @import "bootstrap/scss/images";
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/dropdown";
 @import "bootstrap/scss/forms";
 @import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/button-group";
 @import "bootstrap/scss/card";
 @import "bootstrap/scss/helpers";
 
 // 5. При желании можно в последнюю очередь включить служебный API для генерации классов на основе карты Sass в `_utililies.scss`
 @import "bootstrap/scss/utilities/api";
+@import "bootstrap/scss/bootstrap-icons";
 
 // 6. Добавьте сюда дополнительный пользовательский код
