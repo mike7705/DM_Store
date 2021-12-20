@@ -73,7 +73,7 @@ $spacers: (
     6: $spacer * 3,
     7: $spacer * 5,
 );
-
+$border-color: #ececec;
 // Body
 //
 // Settings for the `<body>` element.
@@ -149,8 +149,8 @@ $dropdown-padding-x: 0.5rem;
 $dropdown-padding-y: 0.5rem;
 
 $dropdown-font-size: $font-size-sm;
-$dropdown-border-color: #ececec;
-$dropdown-border-radius: 3px;
+//$dropdown-border-color: #ececec;
+//$dropdown-border-radius: 3px;
 $dropdown-divider-bg: $gray-100;
 /*
 $dropdown-link-color: $gray-333;
@@ -195,12 +195,16 @@ $accordion-button-focus-border-color: $primary;
 $accordion-button-focus-box-shadow: unset;
 
 //btn
-//$btn-active-box-shadow: none;
-//$btn-focus-width: none;
-//$btn-box-shadow: none;
+$btn-white-space: nowrap; // Set to `nowrap` to prevent text wrapping
+$btn-active-box-shadow: nulls;
+$btn-focus-width: 0;
+$btn-box-shadow: null;
 $btn-active-border-shade-amount: 0;
 $btn-active-border-tint-amount: 0;
 $caret-width: 0.4em;
+$btn-padding-y-sm: 2px;
+$btn-padding-x-sm: 10px;
+$btn-font-size-sm: 0.863rem;
 
 // 3. Включите оставшуюся часть необходимых таблиц стилей Bootstrap
 

@@ -338,5 +338,39 @@ body {
 	}
 }
 .aside__left-side-news {
+	& .side-news__list {
+		overflow: visible;
+		& .side-news__item {
+			& .side-news__item-link {
+				text-overflow: ellipsis;
+			}
+		}
+		&:hover {
+			border: 1px solid white;
+		}
+	}
 }
+/** ! aside__right aside__filters aside__content */
+.aside__content {
+	& .category__filters {
+		& .common__filters {
+			& .dropdown-item {
+				&.active {
+					background-color: #555;
+				}
+			}
+		}
+		& .special__filters {
+		}
+		& .category__products {
+		}
+	}
+}
+.btn-filter {
+	line-height: 1.7rem;
+	padding: 2px 10px;
+	text-transform: none;
+	//color: #333;
+}
+
 // aside ==========================================================================================
