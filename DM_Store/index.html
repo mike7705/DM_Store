@@ -511,22 +511,21 @@
 							<div class="aside__left-banner col col-md-6 col-lg-12 mt-4">
 								<div class="banner">
 									<div class="banner-top">
-										<div class="ratio ratio-1x1">
+										<div class="d-flex flex-column justify-content-center p-3 text-center">
 											<div
-												class="d-flex flex-column justify-content-center px-3 pt-1 text-center">
-												<div
-													class="banner-top-icon p-3 d-flex justify-center align-items-center">
-													<img src="http://placekitten.com/120" alt="" class="rounded-circle">
+												class="banner-top-icon d-flex justify-center align-items-center ratio ratio-1x1">
+												<div class="banner-top-icon-wrapper"><img
+														src="http://placekitten.com/120" alt="" class="rounded-circle">
 												</div>
-												<div class="banner-top-info">
-													<div class="text-center upper muted mb-1">Ваш менеджер
-													</div>
-													<a class="lh-base"
-														href="/company/staff/ekaterina-korotkovskikh/">Евгений
-														Коротковских</a>
-													<div class="lh-base text-secondary upper mt-1">+7 (000)
-														000-00-00</div>
+											</div>
+											<div class="banner-top-info">
+												<div class="text-center upper muted mb-1">Ваш менеджер
 												</div>
+												<a class="lh-base"
+													href="/company/staff/ekaterina-korotkovskikh/">Евгений
+													Коротковских</a>
+												<div class="lh-base text-secondary upper mt-1">+7 (000)
+													000-00-00</div>
 											</div>
 										</div>
 									</div>
@@ -568,35 +567,40 @@
 								<div class="sort-filters">
 									<div class="btn-group sort-filter">
 										<button
-											class="btn btn-outline-secondary btn-sm border btn-filter dropdown-toggle"
-											type="button" data-bs-toggle="dropdown" aria-expanded="false">
-											Small button
+											class="btn btn-outline-primary btn-sm btn-filter btn-sort-filter dropdown-toggle sort [[+mse2_sort:is=``:then=`active`]]"
+											type="button" data-bs-toggle="dropdown" aria-expanded="false"
+											data-sort="pagetitle" data-dir="[[+mse2_sort:is=``:then=`desc`]]"
+											data-default="desc">По популярности
+											<i class="bi bi-arrow-up pl-2"></i>
 										</button>
 										<ul class="dropdown-menu sort-filter-values p-0">
-											<li><a class="dropdown-item lh-lg px-3 py-2 active sort-filter-value"
-													href="#" aria-current="true" data-sort="resource|publishedon"
-													data-dir="asc" data-default="desc">По популярности
-													<i class="bi bi-arrow-up pl-2"></i></a></li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value" href="#">По
+											<li>
+												<a class="dropdown-item lh-lg px-3 py-2 sort-filter-value" href="#"
+													aria-current="true" data-sort="resource|publishedon" data-dir="asc"
+													data-default="desc">По популярности
+													<i class="bi bi-arrow-up pl-2"></i>
+												</a>
+											</li>
+											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value" href="#"
+													aria-current="true" data-sort="resource|publishedon" data-dir="asc"
+													data-default="desc">По
 													популярности
 													<i class="bi bi-arrow-down pl-2"></i></a></li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value" href="#">По
-													алфавиту
-													<i class="bi bi-arrow-up pl-2"></i></a></li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value" href="#">По
-													алфавиту
-													<i class="bi bi-arrow-down pl-2"></i></a></li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value" href="#">По
-													цене
-													<i class="bi bi-arrow-up pl-2"></i></a></li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value" href="#">По
-													цене
-													<i class="bi bi-arrow-down pl-2"></i></a></li>
+											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#">По
+													алфавиту <i class="bi bi-arrow-up pl-2"></i></a></li>
+											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#">По
+													алфавиту <i class="bi bi-arrow-down pl-2"></i></a></li>
+											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#">По
+													цене <i class="bi bi-arrow-up pl-2"></i></a></li>
+											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#">По
+													цене <i class="bi bi-arrow-down pl-2"></i></a></li>
 										</ul>
 									</div>
 								</div>
-								<div class="view-filters">
-
+								<div class="view-filters" style="width:300px;height:50px">
+									<input type="text" class="" id="beginv" value="">
+									<input type="text" class="" id="endv" value="">
+									<div id="slider"></div>
 								</div>
 							</div>
 
@@ -1154,7 +1158,21 @@
         preloadImages: false,
         lazy: false,
     })
-
+    $(function () {
+        $("#slider").slider({
+            range: true,
+            step: 5,
+            values: [10, 25],
+            stop: function (e, ui) {
+                console.log(ui['handleIndex'])
+                if (ui['handleIndex'] == 1) {
+                    $('#endv').val(ui['value'])
+                } else {
+                    $('#beginv').val(ui['value'])
+                }
+            }
+        });
+    });
 </script>
 </body>
 

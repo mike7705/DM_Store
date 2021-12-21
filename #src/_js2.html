@@ -118,5 +118,19 @@
         preloadImages: false,
         lazy: false,
     })
-
+    $(function () {
+        $("#slider").slider({
+            range: true,
+            step: 5,
+            values: [10, 25],
+            stop: function (e, ui) {
+                console.log(ui['handleIndex'])
+                if (ui['handleIndex'] == 1) {
+                    $('#endv').val(ui['value'])
+                } else {
+                    $('#beginv').val(ui['value'])
+                }
+            }
+        });
+    });
 </script>

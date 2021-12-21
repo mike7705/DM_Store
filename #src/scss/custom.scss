@@ -23,7 +23,7 @@ $indigo: #6610f2;
 $purple: #6f42c1;
 $pink: #d63384;
 $red: #fc2a4b;
-$orange: #e6c553;
+$orange: #f57900;
 $yellow: #ffd83a;
 $green: #5fa800;
 $teal: #60c339;
@@ -42,6 +42,7 @@ $dark: #666666;
 
 $theme-color: (
     "primary": #365edc,
+    "main": $orange,
     /*
     "purple": #893ca9,
     "red": #fc2a4b,
@@ -205,7 +206,7 @@ $caret-width: 0.4em;
 $btn-padding-y-sm: 2px;
 $btn-padding-x-sm: 10px;
 $btn-font-size-sm: 0.863rem;
-
+$btn-border-radius-sm: 3px;
 // 3. Включите оставшуюся часть необходимых таблиц стилей Bootstrap
 
 @import "bootstrap/scss/variables";

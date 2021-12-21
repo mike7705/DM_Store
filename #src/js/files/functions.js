@@ -64,6 +64,57 @@ if (location.hash) {
 	}
 }
 //=================
+//Dropdown 
+let sortFilter = document.querySelectorAll(".sort-filter-value");
+console.log(sortFilter)
+if (sortFilter.length > 0) {
+	for (let index = 0; index < sortFilter.length; index++) {
+		const el = sortFilter[index];
+		el.addEventListener("click", function (e) {
+			e.preventDefault()
+			console.log(e.cancelable)
+			let t = e.target
+			let d = t.parentElement.parentElement
+			let c = d.previousElementSibling
+			console.log({ t, c, d })
+			const classes = c.classList;
+			if (classes.contains("btn-sort-filter")) {
+				let ct = c.innerHTML
+				let et = t.innerHTML
+				console.log({ classes, ct, et })
+				c.innerHTML = et
+				if (!classes.contains("active")) c.classList.add('active')
+			}
+			return false
+
+		});
+	}
+}
+
+
+/*if (e.target)
+	targetItem = 1
+	if (unlock) {
+		body_lock(delay);
+		iconMenu.classList.toggle("_active");
+		menuBody.classList.toggle("_active");
+	}
+	*/
+
+/*
+if (iconMenu != null) {
+	let delay = 500;
+	let menuBody = document.querySelector(".menu__body");
+	iconMenu.addEventListener("click", function (e) {
+		if (unlock) {
+			body_lock(delay);
+			iconMenu.classList.toggle("_active");
+			menuBody.classList.toggle("_active");
+		}
+	});
+};
+*/
+//=================
 //Menu
 let iconMenu = document.querySelector(".icon-menu");
 if (iconMenu != null) {

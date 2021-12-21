@@ -168,6 +168,7 @@ body {
 @import "footer";
 @import "home";
 @import "utils";
+@import "jquery-ui.min";
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
@@ -299,6 +300,17 @@ body {
 	& .banner {
 		margin-top: 2rem;
 		border: 1px solid #ececec;
+		& .banner-top {
+			& .banner-top-icon {
+				width: 100%;
+			}
+			& .banner-top-icon-wrapper {
+				& img {
+					max-width: 100%;
+					object-fit: cover;
+				}
+			}
+		}
 		& .banner-bottom {
 			height: 3rem;
 			position: relative;
@@ -330,6 +342,7 @@ body {
 .aside__left-info-button-group {
 	& .list-group-item {
 		line-height: 2.5rem;
+		white-space: nowrap;
 		&:hover {
 			background: transparent;
 			box-shadow: $box-shadow;
