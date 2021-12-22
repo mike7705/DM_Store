@@ -374,6 +374,10 @@ body {
 			}
 		}
 		& .special__filters {
+			& .form-check-label {
+				font-size: 0.85rem;
+				font-weight: 400;
+			}
 		}
 		& .category__products {
 		}

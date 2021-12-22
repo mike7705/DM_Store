@@ -990,6 +990,23 @@ $dropdown-item-padding-x: $spacer !default;
 $dropdown-header-color: $gray-600 !default;
 $dropdown-header-padding: $dropdown-padding-y $dropdown-item-padding-x !default;
 */
+/*
+$form-check-input-width:                  1em;
+$form-check-min-height:                   $font-size-base * $line-height-base;
+$form-check-padding-start:                $form-check-input-width + .5em;
+$form-check-margin-bottom:                .125rem;
+$form-check-label-color:                  null;
+$form-check-label-cursor:                 null;
+$form-check-transition:                   null;
+
+$form-check-input-active-filter:          brightness(90%);
+
+$form-check-input-bg:                     $input-bg;
+$form-check-input-border:                 1px solid rgba($black, .25);
+$form-check-input-border-radius:          .25em;
+$form-check-radio-border-radius:          50%;
+
+*/
 :root {
   --bs-blue: #365edc;
   --bs-indigo: #6610f2;
@@ -4767,7 +4784,7 @@ textarea.form-control-lg {
 
 .form-check {
   display: block;
-  min-height: 1.32rem;
+  min-height: 1.010625rem;
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
 }
@@ -4781,7 +4798,7 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.1em;
   vertical-align: top;
-  background-color: #fff;
+  background-color: #f8f9fa;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -4799,9 +4816,9 @@ textarea.form-control-lg {
   filter: brightness(90%);
 }
 .form-check-input:focus {
-  border-color: #9bafee;
+  border-color: 0;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(54, 94, 220, 0.25);
+  box-shadow: 0;
 }
 .form-check-input:checked {
   background-color: #365edc;
@@ -4825,6 +4842,10 @@ textarea.form-control-lg {
 }
 .form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
   opacity: 0.5;
+}
+
+.form-check-label {
+  color: #333333;
 }
 
 .form-switch {
@@ -24256,6 +24277,10 @@ footer .info .subscribe_button .btn:hover {
 /** ! aside__right aside__filters aside__content */
 .aside__content .category__filters .common__filters .dropdown-item.active {
   background-color: #555;
+}
+.aside__content .category__filters .special__filters .form-check-label {
+  font-size: 0.85rem;
+  font-weight: 400;
 }
 .btn-filter {
   line-height: 1.7rem;

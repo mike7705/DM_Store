@@ -207,6 +207,32 @@ $btn-padding-y-sm: 2px;
 $btn-padding-x-sm: 10px;
 $btn-font-size-sm: 0.863rem;
 $btn-border-radius-sm: 3px;
+
+//! Form-check input (checkbox, radio)
+/*
+$form-check-input-width:                  1em;
+$form-check-min-height:                   $font-size-base * $line-height-base;
+$form-check-padding-start:                $form-check-input-width + .5em;
+$form-check-margin-bottom:                .125rem;
+$form-check-label-color:                  null;
+$form-check-label-cursor:                 null;
+$form-check-transition:                   null;
+
+$form-check-input-active-filter:          brightness(90%);
+
+$form-check-input-bg:                     $input-bg;
+$form-check-input-border:                 1px solid rgba($black, .25);
+$form-check-input-border-radius:          .25em;
+$form-check-radio-border-radius:          50%;
+
+*/
+$form-check-min-height: $font-size-sm * $line-height-sm;
+$form-check-label-color: #333333;
+$form-check-input-bg: #f8f9fa;
+$form-check-input-focus-box-shadow: 0;
+$form-check-input-focus-border: 0;
+$form-check-input-checked-bg-color: $primary;
+
 // 3. Включите оставшуюся часть необходимых таблиц стилей Bootstrap
 
 @import "bootstrap/scss/variables";
