@@ -262,123 +262,1606 @@
 					<div class="col co-md-6 col-lg-9 col-xxl-10- order-lg-3 order-md-2 aside__content">
 						<div class="category__filters">
 							<div class="common__filters d-flex flex-wrap justify-content-between pt-3">
-								<div class="sort-filters">
-									<div class="btn-group sort-filter">
-										<button
-											class="btn btn-outline-primary btn-sm btn-filter btn-sort-filter dropdown-toggle sort [[+mse2_sort:is=``:then=`active`]]"
+								<div class="sort-filters form-group">
+									<div class="btn-group sort-filter" id="">
+										<a id="mse2_sort" href="#"
+											class="btn btn-outline-primary btn-sm btn-filter btn-sort-filter dropdown-toggle sort "
 											type="button" data-bs-toggle="dropdown" aria-expanded="false"
-											data-sort="pagetitle" data-dir="[[+mse2_sort:is=``:then=`desc`]]"
-											data-default="desc">По популярности
-											<i class="bi bi-arrow-up pl-2"></i>
-										</button>
+											data-sort="pagetitle" data-dir="" data-default="desc" data-filter-default="По популярности
+												(возрастание)">По популярности (возрастание)</a>
+										<a type="button"
+											class="reset-current-filter btn btn-outline-primary btn-sm rounded-end text-white active"
+											data-filter="#btn-sort-filter">
+											<i class="bi bi-x-lg"></i>
+										</a>
 										<ul class="dropdown-menu sort-filter-values p-0">
 											<li>
 												<a class="dropdown-item lh-lg px-3 py-2 sort-filter-value" href="#"
 													aria-current="true" data-sort="resource|publishedon" data-dir="asc"
-													data-default="desc">По популярности
-													<i class="bi bi-arrow-up pl-2"></i>
-												</a>
+													data-filter="#mse2_sort" data-filter-default="popular,asc"
+													data-value="popular,asc">По популярности
+													(возрастание)</a>
 											</li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value" href="#"
-													aria-current="true" data-sort="resource|publishedon" data-dir="asc"
-													data-default="desc">По
-													популярности
-													<i class="bi bi-arrow-down pl-2"></i></a></li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#">По
-													алфавиту <i class="bi bi-arrow-up pl-2"></i></a></li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#">По
-													алфавиту <i class="bi bi-arrow-down pl-2"></i></a></li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#">По
-													цене <i class="bi bi-arrow-up pl-2"></i></a></li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#">По
-													цене <i class="bi bi-arrow-down pl-2"></i></a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="view-filters" style="width:300px;height:50px">
-									<input type="text" class="" id="beginv" value="">
-									<input type="text" class="" id="endv" value="">
-									<div id="slider"></div>
-									<i class="bi bi-grid-3x3-gap-fill"></i>
-									<i class="svg  svg-inline-type" aria-hidden="true"><svg
-											xmlns="http://www.w3.org/2000/svg" width="13" height="10"
-											viewBox="0 0 13 10">
-											<path data-name="Rounded Rectangle 917 copy 3" class="cls-1"
-												d="M1566,603h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1566,603Zm5,0h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1571,603Zm5,0h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1576,603Zm-10,4h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1566,607Zm5,0h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1571,607Zm5,0h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1576,607Zm-10,4h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1566,611Zm5,0h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1571,611Zm5,0h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1576,611Z"
-												transform="translate(-1565 -603)"></path>
-										</svg></i>
-									<i class="svg  svg-inline-type" aria-hidden="true"><svg
-											xmlns="http://www.w3.org/2000/svg" width="13" height="10"
-											viewBox="0 0 13 10">
-											<path data-name="Rounded Rectangle 917" class="cls-1"
-												d="M1594,603h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1594,603Zm5,0h6a1,1,0,0,1,0,2h-6A1,1,0,0,1,1599,603Zm-5,4h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1594,607Zm5,0h6a1,1,0,0,1,0,2h-6A1,1,0,0,1,1599,607Zm-5,4h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1594,611Zm5,0h6a1,1,0,0,1,0,2h-6A1,1,0,0,1,1599,611Z"
-												transform="translate(-1593 -603)"></path>
-										</svg></i>
-									<i class="svg  svg-inline-type" aria-hidden="true"><svg
-											xmlns="http://www.w3.org/2000/svg" width="13" height="10"
-											viewBox="0 0 13 10">
-											<path data-name="Rounded Rectangle 918 copy 2" class="cls-1"
-												d="M1621.5,603h2a0.5,0.5,0,0,1,0,1h-2A0.5,0.5,0,0,1,1621.5,603Zm5,0h7a0.5,0.5,0,0,1,0,1h-7A0.5,0.5,0,0,1,1626.5,603Zm-5,3h2a0.5,0.5,0,0,1,0,1h-2A0.5,0.5,0,0,1,1621.5,606Zm5,0h7a0.5,0.5,0,0,1,0,1h-7A0.5,0.5,0,0,1,1626.5,606Zm-5,3h2a0.5,0.5,0,0,1,0,1h-2A0.5,0.5,0,0,1,1621.5,609Zm5,0h7a0.5,0.5,0,0,1,0,1h-7A0.5,0.5,0,0,1,1626.5,609Zm-5,3h2a0.5,0.5,0,0,1,0,1h-2A0.5,0.5,0,0,1,1621.5,612Zm5,0h7a0.5,0.5,0,0,1,0,1h-7A0.5,0.5,0,0,1,1626.5,612Z"
-												transform="translate(-1621 -603)"></path>
-										</svg></i>
-
-								</div>
-							</div>
-
-							<div class="special__filters">
-								<div class="brand-filters">
-									<div class="btn-group brand-filter">
-										<button
-											class="btn btn-outline-primary btn-sm btn-filter btn-sort-filter dropdown-toggle sort [[+mse2_sort:is=``:then=`active`]]"
-											type="button" data-bs-toggle="dropdown" aria-expanded="false"
-											data-sort="pagetitle" data-dir="[[+mse2_sort:is=``:then=`desc`]]"
-											data-default="desc">По популярности
-											<i class="bi bi-arrow-up pl-2"></i>
-										</button>
-										<ul class="dropdown-menu sort-filter-values p-0">
 											<li>
 												<a class="dropdown-item lh-lg px-3 py-2 sort-filter-value" href="#"
 													aria-current="true" data-sort="resource|publishedon" data-dir="asc"
-													data-default="desc">По популярности
-													<i class="bi bi-arrow-up pl-2"></i>
-												</a>
+													data-default="desc" data-filter="#mse2_sort">По популярности
+													(убывание)</a>
 											</li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value" href="#"
-													aria-current="true" data-sort="resource|publishedon" data-dir="asc"
-													data-default="desc">По
-													популярности
-													<i class="bi bi-arrow-down pl-2"></i></a></li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#">По
-													алфавиту <i class="bi bi-arrow-up pl-2"></i></a></li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#">По
-													алфавиту <i class="bi bi-arrow-down pl-2"></i></a></li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#">По
-													цене <i class="bi bi-arrow-up pl-2"></i></a></li>
-											<li><a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#">По
-													цене <i class="bi bi-arrow-down pl-2"></i></a></li>
+											<li>
+												<a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#"
+													data-filter="#mse2_sort">По алфавиту (А...Я)</a>
+											</li>
+											<li>
+												<a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#"
+													data-filter="#mse2_sort">По алфавиту (Я...А)</a>
+											</li>
+											<li>
+												<a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#"
+													data-filter="#mse2_sort">По цене (возрастание)</a>
+											</li>
+											<li>
+												<a class="dropdown-item lh-lg px-3 py-2 sort-filter-value " href="#"
+													data-filter="#mse2_sort">По цене (убывание)</a>
+											</li>
 										</ul>
 									</div>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-									<label class="form-check-label" for="flexCheckDefault">
-										Destie
-									</label>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-										checked>
-									<label class="form-check-label" for="flexCheckChecked">
-										Misterio
-									</label>
-								</div>
 
-
+								</div>
+								<div class="quantity-filters form-group">
+									<label for="mse2_limit">Показывать на странице</label>
+									<select name="mse_limit" id="mse2_limit" class="form-control">
+										<option value="10" selected="">10</option>
+										<option value="25">25</option>
+										<option value="50">50</option>
+										<option value="100">100</option>
+									</select>
+								</div>
 
 							</div>
 						</div>
-						<div class="category__products">
+						<h3>Всего результатов: <span class="mse2_total">137</span></h3>
+						<div class="row">
+							<div id="mse2_sort" class="col-md-6">
+								Сортировка: <a href="#" data-sort="resource|publishedon" data-dir="" data-default="desc"
+									class="sort">
+									Дата публикации <span></span>
+								</a>
+							</div>
 
+
+						</div>
+						<form action="3/" method="post" id="mse2_filters">
+							<div class="d-flex flex-row flex-wrap mt-3 justify-content-start">
+								<div class="slider-filter">
+									<fieldset id="mse2_ms|price" class="fieldset">
+										<div class="btn-group">
+											<a href="#"
+												class="btn btn-outline-primary btn-sm btn-filter btn-slider-filter dropdown-toggle sort filter_title active"
+												type="button" data-bs-toggle="dropdown" aria-expanded="false"
+												data-sort="pagetitle" data-dir="desc" data-default="desc"
+												data-bs-auto-close="outside">
+												<strong_>Цена</strong_>
+											</a>
+											<a type="button"
+												class="reset-current-filter btn btn-outline-primary btn-sm rounded-end text-white pt-1"
+												data-filter="#btn-sort-filter">
+												<i class="bi bi-x-lg"></i>
+											</a>
+											<div class="dropdown-menu slider-filter-values pt-3">
+												<div
+													class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+													<div class="ui-slider-range ui-corner-all ui-widget-header"
+														style="left: 0%; width: 100%;"></div><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 0%;"></span><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 100%;"></span>
+												</div>
+												<div class="mse2_number_inputs row">
+													<div class="col-md-6">
+														<label for="mse2_ms|price_0"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="ms|price" id="mse2_ms|price_0"
+																value="15" data-current-value="15"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="15" data-decimal="0">
+														</label>
+													</div>
+													<div class="col-md-6">
+														<label for="mse2_ms|price_1"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="ms|price" id="mse2_ms|price_1"
+																value="26217" data-current-value="26217"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="26217" data-decimal="0">
+														</label>
+													</div>
+												</div>
+												<div>
+													<hr class="dropdown-divider border-secondary">
+												</div>
+												<div><a class="dropdown-item disabled" href="#" tabindex="-1"
+														aria-disabled="true">Выбрано: <span
+															class="mse2_total">137</span> </a>
+												</div>
+
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="checkbox-filters">
+									<div id="mse2_ms|vendor" class="btn-group checkbox-filter fieldset">
+										<button
+											class="btn btn-outline-primary btn-sm btn-filter btn-checkbox-filter dropdown-toggle sort filter_title"
+											type="button" data-bs-toggle="dropdown" aria-expanded="false"
+											data-sort="pagetitle" data-dir="desc" data-default="desc"
+											data-bs-auto-close="outside">
+											<strong_>Производитель</strong_>
+										</button>
+										<div class="dropdown-menu checkbox-filter-values pr-3">
+											<label for="mse2_ms|vendor_0" class="">
+												<input type="checkbox" name="ms|vendor" id="mse2_ms|vendor_0"
+													value="11">
+												<span>ASUS</span>&nbsp;<sup>24</sup>
+											</label><br><label for="mse2_ms|vendor_1" class="">
+												<input type="checkbox" name="ms|vendor" id="mse2_ms|vendor_1" value="1">
+												<span>Candy</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_ms|vendor_2" class="">
+												<input type="checkbox" name="ms|vendor" id="mse2_ms|vendor_2" value="9">
+												<span>Canon</span>&nbsp;<sup>13</sup>
+											</label><br><label for="mse2_ms|vendor_3" class="">
+												<input type="checkbox" name="ms|vendor" id="mse2_ms|vendor_3" value="8">
+												<span>D-link</span>&nbsp;<sup>13</sup>
+											</label><br><label for="mse2_ms|vendor_4" class="">
+												<input type="checkbox" name="ms|vendor" id="mse2_ms|vendor_4" value="4">
+												<span>Daewoo Electronics</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_ms|vendor_5" class="">
+												<input type="checkbox" name="ms|vendor" id="mse2_ms|vendor_5" value="3">
+												<span>DEXP</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_ms|vendor_6" class="">
+												<input type="checkbox" name="ms|vendor" id="mse2_ms|vendor_6" value="2">
+												<span>Indesit</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_ms|vendor_7" class="">
+												<input type="checkbox" name="ms|vendor" id="mse2_ms|vendor_7"
+													value="10">
+												<span>Motorola</span>&nbsp;<sup>11</sup>
+											</label><br><label for="mse2_ms|vendor_8" class="">
+												<input type="checkbox" name="ms|vendor" id="mse2_ms|vendor_8" value="7">
+												<span>Nikon</span>&nbsp;<sup>13</sup>
+											</label><br><label for="mse2_ms|vendor_9" class="">
+												<input type="checkbox" name="ms|vendor" id="mse2_ms|vendor_9" value="5">
+												<span>Panasonic</span>&nbsp;<sup>29</sup>
+											</label><br><label for="mse2_ms|vendor_10" class="">
+												<input type="checkbox" name="ms|vendor" id="mse2_ms|vendor_10"
+													value="6">
+												<span>Samsung</span>&nbsp;<sup>28</sup>
+											</label><br>
+											<div>
+												<hr class="dropdown-divider border-secondary">
+											</div>
+											<div>
+												<a class="dropdown-item disabled" href="#" tabindex="-1"
+													aria-disabled="true">Выбрано: <span class="mse2_total">137</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="checkbox-filters">
+									<div id="mse2_resource|parent" class="btn-group checkbox-filter fieldset">
+										<button
+											class="btn btn-outline-primary btn-sm btn-filter btn-checkbox-filter dropdown-toggle sort filter_title"
+											type="button" data-bs-toggle="dropdown" aria-expanded="false"
+											data-sort="pagetitle" data-dir="desc" data-default="desc"
+											data-bs-auto-close="outside">
+											<strong_>Категория</strong_>
+										</button>
+										<div class="dropdown-menu checkbox-filter-values pr-3">
+											<label for="mse2_resource|parent_0" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_0" value="4">
+												<span>Стиральные машины</span>&nbsp;<sup>6</sup>
+											</label><br><label for="mse2_resource|parent_1" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_1" value="28">
+												<span>второй уровень</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_resource|parent_2" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_2" value="29">
+												<span>третий уровень</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_resource|parent_3" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_3" value="31">
+												<span>второй уровень вложенности</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_resource|parent_4" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_4" value="32">
+												<span>третий уровень вложенности</span>&nbsp;<sup>4</sup>
+											</label><br><label for="mse2_resource|parent_5" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_5" value="33">
+												<span>четвёртый уровень вложенности</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_resource|parent_6" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_6" value="35">
+												<span>Второй уровень вложенности</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_resource|parent_7" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_7" value="36">
+												<span>Третий уровень вложенности</span>&nbsp;<sup>3</sup>
+											</label><br><label for="mse2_resource|parent_8" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_8" value="37">
+												<span>Четвёртый уровень вложенности</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_resource|parent_9" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_9" value="38">
+												<span>Пятый уровень вложенности</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_resource|parent_10" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_10" value="40">
+												<span>Нижнее бельё</span>&nbsp;<sup>4</sup>
+											</label><br><label for="mse2_resource|parent_11" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_11" value="7">
+												<span>Холодильники</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_resource|parent_12" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_12" value="15">
+												<span>Бытовая техника для кухни</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_resource|parent_13" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_13" value="16">
+												<span>Детские товары</span>&nbsp;<sup>4</sup>
+											</label><br><label for="mse2_resource|parent_14" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_14" value="17">
+												<span>Мебель и интерьер</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_resource|parent_15" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_15" value="18">
+												<span>Строительные инструменты</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_resource|parent_16" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_16" value="20">
+												<span>Маленькая</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_resource|parent_17" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_17" value="21">
+												<span>Средняя</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_resource|parent_18" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_18" value="22">
+												<span>Большая</span>&nbsp;<sup>3</sup>
+											</label><br><label for="mse2_resource|parent_19" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_19" value="23">
+												<span>Очень большая</span>&nbsp;<sup>34</sup>
+											</label><br><label for="mse2_resource|parent_20" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_20" value="24">
+												<span>Большие цены</span>&nbsp;<sup>17</sup>
+											</label><br><label for="mse2_resource|parent_21" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_21" value="25">
+												<span>Нецелые цены</span>&nbsp;<sup>24</sup>
+											</label><br><label for="mse2_resource|parent_22" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_22" value="27">
+												<span>Три уровня вложенности</span>&nbsp;<sup>3</sup>
+											</label><br><label for="mse2_resource|parent_23" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_23" value="30">
+												<span>Четыре уровня вложенности</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_resource|parent_24" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_24" value="34">
+												<span>Пять уровней вложенности</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_resource|parent_25" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_25" value="39">
+												<span>Женская одежда</span>&nbsp;<sup>7</sup>
+											</label><br><label for="mse2_resource|parent_26" class="">
+												<input type="checkbox" name="resource|parent"
+													id="mse2_resource|parent_26" value="26">
+												<span>Электронные товары</span>&nbsp;<sup>4</sup>
+											</label><br>
+											<div>
+												<hr class="dropdown-divider border-secondary">
+											</div>
+											<div>
+												<a class="dropdown-item disabled" href="#" tabindex="-1"
+													aria-disabled="true">Выбрано: <span class="mse2_total">137</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="checkbox-filters">
+									<div id="mse2_msoption|color" class="btn-group checkbox-filter fieldset">
+										<button
+											class="btn btn-outline-primary btn-sm btn-filter btn-checkbox-filter dropdown-toggle sort filter_title"
+											type="button" data-bs-toggle="dropdown" aria-expanded="false"
+											data-sort="pagetitle" data-dir="desc" data-default="desc"
+											data-bs-auto-close="outside">
+											<strong_>Цвета</strong_>
+										</button>
+										<div class="dropdown-menu checkbox-filter-values pr-3">
+											<label for="mse2_msoption|color_0" class="">
+												<input type="checkbox" name="msoption|color" id="mse2_msoption|color_0"
+													value="Голубой">
+												<span>Голубой</span>&nbsp;<sup>32</sup>
+											</label><br><label for="mse2_msoption|color_1" class="">
+												<input type="checkbox" name="msoption|color" id="mse2_msoption|color_1"
+													value="Красны">
+												<span>Красны</span>&nbsp;<sup>32</sup>
+											</label><br><label for="mse2_msoption|color_2" class="">
+												<input type="checkbox" name="msoption|color" id="mse2_msoption|color_2"
+													value="Оранжевый">
+												<span>Оранжевый</span>&nbsp;<sup>33</sup>
+											</label><br><label for="mse2_msoption|color_3" class="">
+												<input type="checkbox" name="msoption|color" id="mse2_msoption|color_3"
+													value="Сереневый">
+												<span>Сереневый</span>&nbsp;<sup>33</sup>
+											</label><br><label for="mse2_msoption|color_4" class="">
+												<input type="checkbox" name="msoption|color" id="mse2_msoption|color_4"
+													value="Синий">
+												<span>Синий</span>&nbsp;<sup>32</sup>
+											</label><br><label for="mse2_msoption|color_5" class="">
+												<input type="checkbox" name="msoption|color" id="mse2_msoption|color_5"
+													value="белый">
+												<span>белый</span>&nbsp;<sup>6</sup>
+											</label><br><label for="mse2_msoption|color_6" class="">
+												<input type="checkbox" name="msoption|color" id="mse2_msoption|color_6"
+													value="синий">
+												<span>синий</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_msoption|color_7" class="">
+												<input type="checkbox" name="msoption|color" id="mse2_msoption|color_7"
+													value="черный">
+												<span>черный</span>&nbsp;<sup>3</sup>
+											</label><br>
+											<div>
+												<hr class="dropdown-divider border-secondary">
+											</div>
+											<div>
+												<a class="dropdown-item disabled" href="#" tabindex="-1"
+													aria-disabled="true">Выбрано: <span class="mse2_total">137</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider-filter">
+									<fieldset id="mse2_msoption|depth" class="fieldset">
+										<div class="btn-group">
+											<button
+												class="btn btn-outline-primary btn-sm btn-filter btn-slider-filter dropdown-toggle sort filter_title"
+												type="button" data-bs-toggle="dropdown" aria-expanded="false"
+												data-sort="pagetitle" data-dir="desc" data-default="desc"
+												data-bs-auto-close="outside">
+												<strong_>Глубина, см</strong_>
+											</button>
+											<div class="dropdown-menu slider-filter-values pt-3">
+												<div
+													class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+													<div class="ui-slider-range ui-corner-all ui-widget-header"
+														style="left: 0%; width: 100%;"></div><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 0%;"></span><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 100%;"></span>
+												</div>
+												<div class="mse2_number_inputs row">
+													<div class="col-md-6">
+														<label for="mse2_msoption|depth_0"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|depth"
+																id="mse2_msoption|depth_0" value="33"
+																data-current-value="33"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="33" data-decimal="0">
+														</label>
+													</div>
+													<div class="col-md-6">
+														<label for="mse2_msoption|depth_1"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|depth"
+																id="mse2_msoption|depth_1" value="54"
+																data-current-value="54"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="54" data-decimal="0">
+														</label>
+													</div>
+												</div>
+												<div>
+													<hr class="dropdown-divider border-secondary">
+												</div>
+												<div><a class="dropdown-item disabled" href="#" tabindex="-1"
+														aria-disabled="true">Выбрано: <span
+															class="mse2_total">137</span> </a>
+												</div>
+
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="slider-filter">
+									<fieldset id="mse2_msoption|loadinglaundry" class="fieldset">
+										<div class="btn-group">
+											<button
+												class="btn btn-outline-primary btn-sm btn-filter btn-slider-filter dropdown-toggle sort filter_title"
+												type="button" data-bs-toggle="dropdown" aria-expanded="false"
+												data-sort="pagetitle" data-dir="desc" data-default="desc"
+												data-bs-auto-close="outside">
+												<strong_>Загрузка белья, кг</strong_>
+											</button>
+											<div class="dropdown-menu slider-filter-values pt-3">
+												<div
+													class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+													<div class="ui-slider-range ui-corner-all ui-widget-header"
+														style="left: 0%; width: 100%;"></div><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 0%;"></span><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 100%;"></span>
+												</div>
+												<div class="mse2_number_inputs row">
+													<div class="col-md-6">
+														<label for="mse2_msoption|loadinglaundry_0"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|loadinglaundry"
+																id="mse2_msoption|loadinglaundry_0" value="4"
+																data-current-value="4"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="4" data-decimal="0">
+														</label>
+													</div>
+													<div class="col-md-6">
+														<label for="mse2_msoption|loadinglaundry_1"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|loadinglaundry"
+																id="mse2_msoption|loadinglaundry_1" value="6"
+																data-current-value="6"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="6" data-decimal="0">
+														</label>
+													</div>
+												</div>
+												<div>
+													<hr class="dropdown-divider border-secondary">
+												</div>
+												<div><a class="dropdown-item disabled" href="#" tabindex="-1"
+														aria-disabled="true">Выбрано: <span
+															class="mse2_total">137</span> </a>
+												</div>
+
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="checkbox-filters">
+									<div id="mse2_msoption|typeofload" class="btn-group checkbox-filter fieldset">
+										<button
+											class="btn btn-outline-primary btn-sm btn-filter btn-checkbox-filter dropdown-toggle sort filter_title"
+											type="button" data-bs-toggle="dropdown" aria-expanded="false"
+											data-sort="pagetitle" data-dir="desc" data-default="desc"
+											data-bs-auto-close="outside">
+											<strong_>Тип загрузки</strong_>
+										</button>
+										<div class="dropdown-menu checkbox-filter-values pr-3">
+											<label for="mse2_msoption|typeofload_0" class="">
+												<input type="checkbox" name="msoption|typeofload"
+													id="mse2_msoption|typeofload_0" value="вертикальная">
+												<span>вертикальная</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_msoption|typeofload_1" class="">
+												<input type="checkbox" name="msoption|typeofload"
+													id="mse2_msoption|typeofload_1" value="фронтальная">
+												<span>фронтальная</span>&nbsp;<sup>5</sup>
+											</label><br>
+											<div>
+												<hr class="dropdown-divider border-secondary">
+											</div>
+											<div>
+												<a class="dropdown-item disabled" href="#" tabindex="-1"
+													aria-disabled="true">Выбрано: <span class="mse2_total">137</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider-filter">
+									<fieldset id="mse2_msoption|numberofrotation" class="fieldset">
+										<div class="btn-group">
+											<button
+												class="btn btn-outline-primary btn-sm btn-filter btn-slider-filter dropdown-toggle sort filter_title"
+												type="button" data-bs-toggle="dropdown" aria-expanded="false"
+												data-sort="pagetitle" data-dir="desc" data-default="desc"
+												data-bs-auto-close="outside">
+												<strong_>Количество оборотов, об/мин</strong_>
+											</button>
+											<div class="dropdown-menu slider-filter-values pt-3">
+												<div
+													class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+													<div class="ui-slider-range ui-corner-all ui-widget-header"
+														style="left: 0%; width: 100%;"></div><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 0%;"></span><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 100%;"></span>
+												</div>
+												<div class="mse2_number_inputs row">
+													<div class="col-md-6">
+														<label for="mse2_msoption|numberofrotation_0"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|numberofrotation"
+																id="mse2_msoption|numberofrotation_0" value="700"
+																data-current-value="700"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="700" data-decimal="0">
+														</label>
+													</div>
+													<div class="col-md-6">
+														<label for="mse2_msoption|numberofrotation_1"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|numberofrotation"
+																id="mse2_msoption|numberofrotation_1" value="1000"
+																data-current-value="1000"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="1000" data-decimal="0">
+														</label>
+													</div>
+												</div>
+												<div>
+													<hr class="dropdown-divider border-secondary">
+												</div>
+												<div><a class="dropdown-item disabled" href="#" tabindex="-1"
+														aria-disabled="true">Выбрано: <span
+															class="mse2_total">137</span> </a>
+												</div>
+
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="checkbox-filters">
+									<div id="mse2_msoption|energyclass" class="btn-group checkbox-filter fieldset">
+										<button
+											class="btn btn-outline-primary btn-sm btn-filter btn-checkbox-filter dropdown-toggle sort filter_title"
+											type="button" data-bs-toggle="dropdown" aria-expanded="false"
+											data-sort="pagetitle" data-dir="desc" data-default="desc"
+											data-bs-auto-close="outside">
+											<strong_>Класс энергопотребления</strong_>
+										</button>
+										<div class="dropdown-menu checkbox-filter-values pr-3">
+											<label for="mse2_msoption|energyclass_0" class="">
+												<input type="checkbox" name="msoption|energyclass"
+													id="mse2_msoption|energyclass_0" value="A">
+												<span>A</span>&nbsp;<sup>4</sup>
+											</label><br><label for="mse2_msoption|energyclass_1" class="">
+												<input type="checkbox" name="msoption|energyclass"
+													id="mse2_msoption|energyclass_1" value="A++">
+												<span>A++</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_msoption|energyclass_2" class="">
+												<input type="checkbox" name="msoption|energyclass"
+													id="mse2_msoption|energyclass_2" value="G">
+												<span>G</span>&nbsp;<sup>1</sup>
+											</label><br>
+											<div>
+												<hr class="dropdown-divider border-secondary">
+											</div>
+											<div>
+												<a class="dropdown-item disabled" href="#" tabindex="-1"
+													aria-disabled="true">Выбрано: <span class="mse2_total">137</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider-filter">
+									<fieldset id="mse2_msoption|width" class="fieldset">
+										<div class="btn-group">
+											<button
+												class="btn btn-outline-primary btn-sm btn-filter btn-slider-filter dropdown-toggle sort filter_title"
+												type="button" data-bs-toggle="dropdown" aria-expanded="false"
+												data-sort="pagetitle" data-dir="desc" data-default="desc"
+												data-bs-auto-close="outside">
+												<strong_>Ширина, см</strong_>
+											</button>
+											<div class="dropdown-menu slider-filter-values pt-3">
+												<div
+													class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+													<div class="ui-slider-range ui-corner-all ui-widget-header"
+														style="left: 0%; width: 100%;"></div><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 0%;"></span><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 100%;"></span>
+												</div>
+												<div class="mse2_number_inputs row">
+													<div class="col-md-6">
+														<label for="mse2_msoption|width_0"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|width"
+																id="mse2_msoption|width_0" value="45"
+																data-current-value="45"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="45" data-decimal="0">
+														</label>
+													</div>
+													<div class="col-md-6">
+														<label for="mse2_msoption|width_1"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|width"
+																id="mse2_msoption|width_1" value="102"
+																data-current-value="102"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="102" data-decimal="0">
+														</label>
+													</div>
+												</div>
+												<div>
+													<hr class="dropdown-divider border-secondary">
+												</div>
+												<div><a class="dropdown-item disabled" href="#" tabindex="-1"
+														aria-disabled="true">Выбрано: <span
+															class="mse2_total">137</span> </a>
+												</div>
+
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="slider-filter">
+									<fieldset id="mse2_msoption|height" class="fieldset">
+										<div class="btn-group">
+											<button
+												class="btn btn-outline-primary btn-sm btn-filter btn-slider-filter dropdown-toggle sort filter_title"
+												type="button" data-bs-toggle="dropdown" aria-expanded="false"
+												data-sort="pagetitle" data-dir="desc" data-default="desc"
+												data-bs-auto-close="outside">
+												<strong_>Высота, см</strong_>
+											</button>
+											<div class="dropdown-menu slider-filter-values pt-3">
+												<div
+													class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+													<div class="ui-slider-range ui-corner-all ui-widget-header"
+														style="left: 0%; width: 100%;"></div><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 0%;"></span><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 100%;"></span>
+												</div>
+												<div class="mse2_number_inputs row">
+													<div class="col-md-6">
+														<label for="mse2_msoption|height_0"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|height"
+																id="mse2_msoption|height_0" value="31"
+																data-current-value="31"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="31" data-decimal="0">
+														</label>
+													</div>
+													<div class="col-md-6">
+														<label for="mse2_msoption|height_1"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|height"
+																id="mse2_msoption|height_1" value="102"
+																data-current-value="102"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="102" data-decimal="0">
+														</label>
+													</div>
+												</div>
+												<div>
+													<hr class="dropdown-divider border-secondary">
+												</div>
+												<div><a class="dropdown-item disabled" href="#" tabindex="-1"
+														aria-disabled="true">Выбрано: <span
+															class="mse2_total">137</span> </a>
+												</div>
+
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="checkbox-filters">
+									<div id="mse2_msoption|locationoffreezer"
+										class="btn-group checkbox-filter fieldset">
+										<button
+											class="btn btn-outline-primary btn-sm btn-filter btn-checkbox-filter dropdown-toggle sort filter_title"
+											type="button" data-bs-toggle="dropdown" aria-expanded="false"
+											data-sort="pagetitle" data-dir="desc" data-default="desc"
+											data-bs-auto-close="outside">
+											<strong_>Расположение морозильной камеры</strong_>
+										</button>
+										<div class="dropdown-menu checkbox-filter-values pr-3">
+											<label for="mse2_msoption|locationoffreezer_0" class="">
+												<input type="checkbox" name="msoption|locationoffreezer"
+													id="mse2_msoption|locationoffreezer_0" value="Сверху">
+												<span>Сверху</span>&nbsp;<sup>1</sup>
+											</label><br>
+											<div>
+												<hr class="dropdown-divider border-secondary">
+											</div>
+											<div>
+												<a class="dropdown-item disabled" href="#" tabindex="-1"
+													aria-disabled="true">Выбрано: <span class="mse2_total">137</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="checkbox-filters">
+									<div id="mse2_msoption|typeofrefrigeration"
+										class="btn-group checkbox-filter fieldset">
+										<button
+											class="btn btn-outline-primary btn-sm btn-filter btn-checkbox-filter dropdown-toggle sort filter_title"
+											type="button" data-bs-toggle="dropdown" aria-expanded="false"
+											data-sort="pagetitle" data-dir="desc" data-default="desc"
+											data-bs-auto-close="outside">
+											<strong_>Система охлаждения холодильной камеры</strong_>
+										</button>
+										<div class="dropdown-menu checkbox-filter-values pr-3">
+											<label for="mse2_msoption|typeofrefrigeration_0" class="">
+												<input type="checkbox" name="msoption|typeofrefrigeration"
+													id="mse2_msoption|typeofrefrigeration_0" value="Smart Frost">
+												<span>Smart Frost</span>&nbsp;<sup>1</sup>
+											</label><br>
+											<div>
+												<hr class="dropdown-divider border-secondary">
+											</div>
+											<div>
+												<a class="dropdown-item disabled" href="#" tabindex="-1"
+													aria-disabled="true">Выбрано: <span class="mse2_total">137</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="checkbox-filters">
+									<div id="mse2_msoption|typeoffreezer" class="btn-group checkbox-filter fieldset">
+										<button
+											class="btn btn-outline-primary btn-sm btn-filter btn-checkbox-filter dropdown-toggle sort filter_title"
+											type="button" data-bs-toggle="dropdown" aria-expanded="false"
+											data-sort="pagetitle" data-dir="desc" data-default="desc"
+											data-bs-auto-close="outside">
+											<strong_>Система охлаждения морозильной камеры</strong_>
+										</button>
+										<div class="dropdown-menu checkbox-filter-values pr-3">
+											<label for="mse2_msoption|typeoffreezer_0" class="">
+												<input type="checkbox" name="msoption|typeoffreezer"
+													id="mse2_msoption|typeoffreezer_0" value="Капельная система">
+												<span>Капельная система</span>&nbsp;<sup>1</sup>
+											</label><br>
+											<div>
+												<hr class="dropdown-divider border-secondary">
+											</div>
+											<div>
+												<a class="dropdown-item disabled" href="#" tabindex="-1"
+													aria-disabled="true">Выбрано: <span class="mse2_total">137</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider-filter">
+									<fieldset id="mse2_msoption|totalv" class="fieldset">
+										<div class="btn-group">
+											<button
+												class="btn btn-outline-primary btn-sm btn-filter btn-slider-filter dropdown-toggle sort filter_title"
+												type="button" data-bs-toggle="dropdown" aria-expanded="false"
+												data-sort="pagetitle" data-dir="desc" data-default="desc"
+												data-bs-auto-close="outside">
+												<strong_>Общий объем
+												</strong_>
+											</button>
+											<div class="dropdown-menu slider-filter-values pt-3">
+												<div
+													class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+													<div class="ui-slider-range ui-corner-all ui-widget-header"
+														style="left: 0%; width: 100%;"></div><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 0%;"></span><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 100%;"></span>
+												</div>
+												<div class="mse2_number_inputs row">
+													<div class="col-md-6">
+														<label for="mse2_msoption|totalv_0"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|totalv"
+																id="mse2_msoption|totalv_0" value="242"
+																data-current-value="242"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="242" data-decimal="0">
+														</label>
+													</div>
+													<div class="col-md-6">
+														<label for="mse2_msoption|totalv_1"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|totalv"
+																id="mse2_msoption|totalv_1" value="520"
+																data-current-value="520"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="520" data-decimal="0">
+														</label>
+													</div>
+												</div>
+												<div>
+													<hr class="dropdown-divider border-secondary">
+												</div>
+												<div><a class="dropdown-item disabled" href="#" tabindex="-1"
+														aria-disabled="true">Выбрано: <span
+															class="mse2_total">137</span> </a>
+												</div>
+
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="slider-filter">
+									<fieldset id="mse2_msoption|vofrefrigerator" class="fieldset">
+										<div class="btn-group">
+											<button
+												class="btn btn-outline-primary btn-sm btn-filter btn-slider-filter dropdown-toggle sort filter_title"
+												type="button" data-bs-toggle="dropdown" aria-expanded="false"
+												data-sort="pagetitle" data-dir="desc" data-default="desc"
+												data-bs-auto-close="outside">
+												<strong_>Объем холодильной камеры, л</strong_>
+											</button>
+											<div class="dropdown-menu slider-filter-values pt-3">
+												<div
+													class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+													<div class="ui-slider-range ui-corner-all ui-widget-header"
+														style="left: 0%; width: 100%;"></div><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 0%;"></span><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 100%;"></span>
+												</div>
+												<div class="mse2_number_inputs row">
+													<div class="col-md-6">
+														<label for="mse2_msoption|vofrefrigerator_0"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|vofrefrigerator"
+																id="mse2_msoption|vofrefrigerator_0" value="60"
+																data-current-value="60"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="60" data-decimal="0">
+														</label>
+													</div>
+													<div class="col-md-6">
+														<label for="mse2_msoption|vofrefrigerator_1"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|vofrefrigerator"
+																id="mse2_msoption|vofrefrigerator_1" value="80"
+																data-current-value="80"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="80" data-decimal="0">
+														</label>
+													</div>
+												</div>
+												<div>
+													<hr class="dropdown-divider border-secondary">
+												</div>
+												<div><a class="dropdown-item disabled" href="#" tabindex="-1"
+														aria-disabled="true">Выбрано: <span
+															class="mse2_total">137</span> </a>
+												</div>
+
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="slider-filter">
+									<fieldset id="mse2_msoption|noiselevel" class="fieldset">
+										<div class="btn-group">
+											<button
+												class="btn btn-outline-primary btn-sm btn-filter btn-slider-filter dropdown-toggle sort filter_title"
+												type="button" data-bs-toggle="dropdown" aria-expanded="false"
+												data-sort="pagetitle" data-dir="desc" data-default="desc"
+												data-bs-auto-close="outside">
+												<strong_>Уровень шума, дБ</strong_>
+											</button>
+											<div class="dropdown-menu slider-filter-values pt-3">
+												<div
+													class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+													<div class="ui-slider-range ui-corner-all ui-widget-header"
+														style="left: 0%; width: 100%;"></div><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 0%;"></span><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 100%;"></span>
+												</div>
+												<div class="mse2_number_inputs row">
+													<div class="col-md-6">
+														<label for="mse2_msoption|noiselevel_0"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|noiselevel"
+																id="mse2_msoption|noiselevel_0" value="20"
+																data-current-value="20"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="20" data-decimal="0">
+														</label>
+													</div>
+													<div class="col-md-6">
+														<label for="mse2_msoption|noiselevel_1"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|noiselevel"
+																id="mse2_msoption|noiselevel_1" value="55"
+																data-current-value="55"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="55" data-decimal="0">
+														</label>
+													</div>
+												</div>
+												<div>
+													<hr class="dropdown-divider border-secondary">
+												</div>
+												<div><a class="dropdown-item disabled" href="#" tabindex="-1"
+														aria-disabled="true">Выбрано: <span
+															class="mse2_total">137</span> </a>
+												</div>
+
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="slider-filter">
+									<fieldset id="mse2_msoption|freezingpower" class="fieldset">
+										<div class="btn-group">
+											<button
+												class="btn btn-outline-primary btn-sm btn-filter btn-slider-filter dropdown-toggle sort filter_title"
+												type="button" data-bs-toggle="dropdown" aria-expanded="false"
+												data-sort="pagetitle" data-dir="desc" data-default="desc"
+												data-bs-auto-close="outside">
+												<strong_>Мощность замораживания кг/сутки</strong_>
+											</button>
+											<div class="dropdown-menu slider-filter-values pt-3">
+												<div
+													class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+													<div class="ui-slider-range ui-corner-all ui-widget-header"
+														style="left: 0%; width: 100%;"></div><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 0%;"></span><span tabindex="0"
+														class="ui-slider-handle ui-corner-all ui-state-default"
+														style="left: 100%;"></span>
+												</div>
+												<div class="mse2_number_inputs row">
+													<div class="col-md-6">
+														<label for="mse2_msoption|freezingpower_0"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|freezingpower"
+																id="mse2_msoption|freezingpower_0" value="12"
+																data-current-value="12"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="12" data-decimal="0">
+														</label>
+													</div>
+													<div class="col-md-6">
+														<label for="mse2_msoption|freezingpower_1"
+															class="d-flex align-items-center input-filter-label">
+															<input type="text" name="msoption|freezingpower"
+																id="mse2_msoption|freezingpower_1" value="60"
+																data-current-value="60"
+																class="form-control ml-1 input-filter-value"
+																data-original-value="60" data-decimal="0">
+														</label>
+													</div>
+												</div>
+												<div>
+													<hr class="dropdown-divider border-secondary">
+												</div>
+												<div><a class="dropdown-item disabled" href="#" tabindex="-1"
+														aria-disabled="true">Выбрано: <span
+															class="mse2_total">137</span> </a>
+												</div>
+
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="checkbox-filters">
+									<div id="mse2_msoption|autonomouscoldstorage"
+										class="btn-group checkbox-filter fieldset">
+										<button
+											class="btn btn-outline-primary btn-sm btn-filter btn-checkbox-filter dropdown-toggle sort filter_title"
+											type="button" data-bs-toggle="dropdown" aria-expanded="false"
+											data-sort="pagetitle" data-dir="desc" data-default="desc"
+											data-bs-auto-close="outside">
+											<strong_>Автономное сохранение холода, час</strong_>
+										</button>
+										<div class="dropdown-menu checkbox-filter-values pr-3">
+											<label for="mse2_msoption|autonomouscoldstorage_0" class="">
+												<input type="checkbox" name="msoption|autonomouscoldstorage"
+													id="mse2_msoption|autonomouscoldstorage_0" value="111">
+												<span>111</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_msoption|autonomouscoldstorage_1" class="">
+												<input type="checkbox" name="msoption|autonomouscoldstorage"
+													id="mse2_msoption|autonomouscoldstorage_1" value="43534">
+												<span>43534</span>&nbsp;<sup>1</sup>
+											</label><br>
+											<div>
+												<hr class="dropdown-divider border-secondary">
+											</div>
+											<div>
+												<a class="dropdown-item disabled" href="#" tabindex="-1"
+													aria-disabled="true">Выбрано: <span class="mse2_total">137</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="checkbox-filters">
+									<div id="mse2_msoption|features" class="btn-group checkbox-filter fieldset">
+										<button
+											class="btn btn-outline-primary btn-sm btn-filter btn-checkbox-filter dropdown-toggle sort filter_title"
+											type="button" data-bs-toggle="dropdown" aria-expanded="false"
+											data-sort="pagetitle" data-dir="desc" data-default="desc"
+											data-bs-auto-close="outside">
+											<strong_>Особенности</strong_>
+										</button>
+										<div class="dropdown-menu checkbox-filter-values pr-3">
+											<label for="mse2_msoption|features_0" class="">
+												<input type="checkbox" name="msoption|features"
+													id="mse2_msoption|features_0" value="EcoTime">
+												<span>EcoTime</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_msoption|features_1" class="">
+												<input type="checkbox" name="msoption|features"
+													id="mse2_msoption|features_1" value="без отжима">
+												<span>без отжима</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_msoption|features_2" class="">
+												<input type="checkbox" name="msoption|features"
+													id="mse2_msoption|features_2" value="дополнительное полоскание">
+												<span>дополнительное полоскание</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_msoption|features_3" class="">
+												<input type="checkbox" name="msoption|features"
+													id="mse2_msoption|features_3" value="индикатор блокировки дверцы">
+												<span>индикатор блокировки дверцы</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_msoption|features_4" class="">
+												<input type="checkbox" name="msoption|features"
+													id="mse2_msoption|features_4" value="индикация окончания стирки">
+												<span>индикация окончания стирки</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_msoption|features_5" class="">
+												<input type="checkbox" name="msoption|features"
+													id="mse2_msoption|features_5" value="кнопочное управление">
+												<span>кнопочное управление</span>&nbsp;<sup>3</sup>
+											</label><br><label for="mse2_msoption|features_6" class="">
+												<input type="checkbox" name="msoption|features"
+													id="mse2_msoption|features_6" value="контроль пенообразования">
+												<span>контроль пенообразования</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_msoption|features_7" class="">
+												<input type="checkbox" name="msoption|features"
+													id="mse2_msoption|features_7" value="нержавеющая сталь">
+												<span>нержавеющая сталь</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_msoption|features_8" class="">
+												<input type="checkbox" name="msoption|features"
+													id="mse2_msoption|features_8" value="пауза">
+												<span>пауза</span>&nbsp;<sup>2</sup>
+											</label><br><label for="mse2_msoption|features_9" class="">
+												<input type="checkbox" name="msoption|features"
+													id="mse2_msoption|features_9" value="поворотный механизм">
+												<span>поворотный механизм</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_msoption|features_10" class="">
+												<input type="checkbox" name="msoption|features"
+													id="mse2_msoption|features_10" value="удаление пятен">
+												<span>удаление пятен</span>&nbsp;<sup>1</sup>
+											</label><br><label for="mse2_msoption|features_11" class="">
+												<input type="checkbox" name="msoption|features"
+													id="mse2_msoption|features_11"
+													value="электронно-механическое управление">
+												<span>электронно-механическое управление</span>&nbsp;<sup>2</sup>
+											</label><br>
+											<div>
+												<hr class="dropdown-divider border-secondary">
+											</div>
+											<div>
+												<a class="dropdown-item disabled" href="#" tabindex="-1"
+													aria-disabled="true">Выбрано: <span class="mse2_total">137</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between">
+								<button type="reset" class="btn btn-light hidden">Сбросить</button>
+								<button type="submit" class="btn btn-primary hidden">Отправить</button>
+							</div>
+						</form>
+						<div id="mse2_selected_wrapper">
+							<div id="mse2_selected">
+								Вы выбрали :<span></span>
+							</div>
+						</div>
+
+						<div id="mse2_results">
+							<div class="ms2_product mb-5 mb-md-3" itemtype="http://schema.org/Product" itemscope="">
+								<meta itemprop="description" content="BABYONO 238 Набор посуды для кормления">
+								<meta itemprop="name" content="BABYONO 238 Набор посуды для кормления">
+
+								<form method="post"
+									class="ms2_form d-flex flex-column flex-md-row align-items-center no-gutters">
+									<input type="hidden" name="id" value="153">
+									<input type="hidden" name="count" value="1">
+									<input type="hidden" name="options" value="[]">
+									<div class="col-md-2 text-center text-md-left">
+										<a href="babyono-238-set-of-dishes-for-feeding-459.html">
+											<img src="/assets/images/products/153/small/34-79-thickbox.jpg"
+												class="mw-100" alt="BABYONO 238 Набор посуды для кормления"
+												title="BABYONO 238 Набор посуды для кормления" itemprop="image">
+										</a>
+									</div>
+									<div class="col-md-10 d-flex flex-column flex-md-row align-items-center no-gutters"
+										itemtype="http://schema.org/AggregateOffer" itemprop="offers" itemscope="">
+										<meta itemprop="category" content="Нецелые цены">
+										<meta itemprop="name" content="BABYONO 238 Набор посуды для кормления">
+										<meta itemprop="offerCount" content="1">
+										<meta itemprop="price" content="15">
+										<meta itemprop="lowPrice" content="15">
+										<meta itemprop="priceCurrency" content="RUR">
+
+										<div class="col-12 col-md-8 mt-2 mt-md-0 flex-grow-1">
+											<div class="d-flex justify-content-around justify-content-md-start">
+												<a href="babyono-238-set-of-dishes-for-feeding-459.html"
+													class="font-weight-bold">BABYONO 238 Набор посуды для кормления</a>
+												<span class="price ml-md-3">15 руб.</span>
+												<span class="old_price ml-md-3">15 руб.</span>
+											</div>
+											<div
+												class="flags mt-2 d-flex justify-content-around justify-content-md-start">
+											</div>
+											<div class="mt-2 text-center text-md-left">
+												<small>BABYONO 238 Набор посуды для кормления</small>
+											</div>
+										</div>
+										<div class="col-12 col-md-4 mt-2 mt-md-0 text-center text-md-right">
+											<button class="btn btn-primary" type="submit" name="ms2_action"
+												value="cart/add">
+												Добавить в корзину </button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="ms2_product mb-5 mb-md-3" itemtype="http://schema.org/Product" itemscope="">
+								<meta itemprop="description" content="Bluetooth гарнитура Nokia BH-903">
+								<meta itemprop="name" content="Bluetooth гарнитура Nokia BH-903">
+
+								<form method="post"
+									class="ms2_form d-flex flex-column flex-md-row align-items-center no-gutters">
+									<input type="hidden" name="id" value="159">
+									<input type="hidden" name="count" value="1">
+									<input type="hidden" name="options" value="[]">
+									<div class="col-md-2 text-center text-md-left">
+										<a href="bluetooth-headset-nokia-bh-903-465.html">
+											<img src="/assets/images/products/159/small/74-134-thickbox.jpg"
+												class="mw-100" alt="Bluetooth гарнитура Nokia BH-903"
+												title="Bluetooth гарнитура Nokia BH-903" itemprop="image">
+										</a>
+									</div>
+									<div class="col-md-10 d-flex flex-column flex-md-row align-items-center no-gutters"
+										itemtype="http://schema.org/AggregateOffer" itemprop="offers" itemscope="">
+										<meta itemprop="category" content="Нецелые цены">
+										<meta itemprop="name" content="Bluetooth гарнитура Nokia BH-903">
+										<meta itemprop="offerCount" content="1">
+										<meta itemprop="price" content="135">
+										<meta itemprop="lowPrice" content="135">
+										<meta itemprop="priceCurrency" content="RUR">
+
+										<div class="col-12 col-md-8 mt-2 mt-md-0 flex-grow-1">
+											<div class="d-flex justify-content-around justify-content-md-start">
+												<a href="bluetooth-headset-nokia-bh-903-465.html"
+													class="font-weight-bold">Bluetooth гарнитура Nokia BH-903</a>
+												<span class="price ml-md-3">135 руб.</span>
+												<span class="old_price ml-md-3">135 руб.</span>
+											</div>
+											<div
+												class="flags mt-2 d-flex justify-content-around justify-content-md-start">
+												<span
+													class="badge badge-secondary badge-pill mr-md-1">Рекомендуем</span>
+											</div>
+											<div class="mt-2 text-center text-md-left">
+												<small>Bluetooth гарнитура Nokia BH-903</small>
+											</div>
+										</div>
+										<div class="col-12 col-md-4 mt-2 mt-md-0 text-center text-md-right">
+											<button class="btn btn-primary" type="submit" name="ms2_action"
+												value="cart/add">
+												Добавить в корзину </button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="ms2_product mb-5 mb-md-3" itemtype="http://schema.org/Product" itemscope="">
+								<meta itemprop="description" content="Bluetooth гарнитура Plantronics Voyager 835">
+								<meta itemprop="name" content="Bluetooth гарнитура Plantronics Voyager 835">
+
+								<form method="post"
+									class="ms2_form d-flex flex-column flex-md-row align-items-center no-gutters">
+									<input type="hidden" name="id" value="59">
+									<input type="hidden" name="count" value="1">
+									<input type="hidden" name="options" value="[]">
+									<div class="col-md-2 text-center text-md-left">
+										<a href="plantronics-voyager-835-365-bluetooth-headset.html">
+											<img src="/assets/images/products/59/small/75-135-thickbox.jpg"
+												class="mw-100" alt="Bluetooth гарнитура Plantronics Voyager 835"
+												title="Bluetooth гарнитура Plantronics Voyager 835" itemprop="image">
+										</a>
+									</div>
+									<div class="col-md-10 d-flex flex-column flex-md-row align-items-center no-gutters"
+										itemtype="http://schema.org/AggregateOffer" itemprop="offers" itemscope="">
+										<meta itemprop="category" content="Очень большая">
+										<meta itemprop="name" content="Bluetooth гарнитура Plantronics Voyager 835">
+										<meta itemprop="offerCount" content="1">
+										<meta itemprop="price" content="75">
+										<meta itemprop="lowPrice" content="75">
+										<meta itemprop="priceCurrency" content="RUR">
+
+										<div class="col-12 col-md-8 mt-2 mt-md-0 flex-grow-1">
+											<div class="d-flex justify-content-around justify-content-md-start">
+												<a href="plantronics-voyager-835-365-bluetooth-headset.html"
+													class="font-weight-bold">Bluetooth гарнитура Plantronics Voyager
+													835</a>
+												<span class="price ml-md-3">75 руб.</span>
+											</div>
+											<div
+												class="flags mt-2 d-flex justify-content-around justify-content-md-start">
+											</div>
+											<div class="mt-2 text-center text-md-left">
+												<small>Bluetooth гарнитура Plantronics Voyager 835</small>
+											</div>
+										</div>
+										<div class="col-12 col-md-4 mt-2 mt-md-0 text-center text-md-right">
+											<button class="btn btn-primary" type="submit" name="ms2_action"
+												value="cart/add">
+												Добавить в корзину </button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="ms2_product mb-5 mb-md-3" itemtype="http://schema.org/Product" itemscope="">
+								<meta itemprop="description" content="Candy CS34 1052DB1/2-07">
+								<meta itemprop="name" content="Candy CS34 1052DB1/2-07">
+
+								<form method="post"
+									class="ms2_form d-flex flex-column flex-md-row align-items-center no-gutters">
+									<input type="hidden" name="id" value="14">
+									<input type="hidden" name="count" value="1">
+									<input type="hidden" name="options" value="[]">
+									<div class="col-md-2 text-center text-md-left">
+										<a href="candy-cs34-1052db1-2-07.html">
+											<img src="/assets/images/products/14/small/56.jpg" class="mw-100"
+												alt="Candy CS34 1052DB1/2-07" title="Candy CS34 1052DB1/2-07"
+												itemprop="image">
+										</a>
+									</div>
+									<div class="col-md-10 d-flex flex-column flex-md-row align-items-center no-gutters"
+										itemtype="http://schema.org/AggregateOffer" itemprop="offers" itemscope="">
+										<meta itemprop="category" content="Стиральные машины">
+										<meta itemprop="name" content="Candy CS34 1052DB1/2-07">
+										<meta itemprop="offerCount" content="1">
+										<meta itemprop="price" content="14990">
+										<meta itemprop="lowPrice" content="14990">
+										<meta itemprop="priceCurrency" content="RUR">
+
+										<div class="col-12 col-md-8 mt-2 mt-md-0 flex-grow-1">
+											<div class="d-flex justify-content-around justify-content-md-start">
+												<a href="candy-cs34-1052db1-2-07.html" class="font-weight-bold">Candy
+													CS34 1052DB1/2-07</a>
+												<span class="price ml-md-3">14 990 руб.</span>
+												<span class="old_price ml-md-3">16 500 руб.</span>
+											</div>
+											<div
+												class="flags mt-2 d-flex justify-content-around justify-content-md-start">
+												<span
+													class="badge badge-secondary badge-pill mr-md-1">Рекомендуем</span>
+											</div>
+										</div>
+										<div class="col-12 col-md-4 mt-2 mt-md-0 text-center text-md-right">
+											<button class="btn btn-primary" type="submit" name="ms2_action"
+												value="cart/add">
+												Добавить в корзину </button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="ms2_product mb-5 mb-md-3" itemtype="http://schema.org/Product" itemscope="">
+								<meta itemprop="description" content="Candy CS4 1051D1/2-07">
+								<meta itemprop="name" content="Candy CS4 1051D1/2-07">
+
+								<form method="post"
+									class="ms2_form d-flex flex-column flex-md-row align-items-center no-gutters">
+									<input type="hidden" name="id" value="9">
+									<input type="hidden" name="count" value="1">
+									<input type="hidden" name="options" value="[]">
+									<div class="col-md-2 text-center text-md-left">
+										<a href="candy-cs4-1051d1-2-07.html">
+											<img src="/assets/images/products/9/small/06.jpg" class="mw-100"
+												alt="Candy CS4 1051D1/2-07" title="Candy CS4 1051D1/2-07"
+												itemprop="image">
+										</a>
+									</div>
+									<div class="col-md-10 d-flex flex-column flex-md-row align-items-center no-gutters"
+										itemtype="http://schema.org/AggregateOffer" itemprop="offers" itemscope="">
+										<meta itemprop="category" content="Стиральные машины">
+										<meta itemprop="name" content="Candy CS4 1051D1/2-07">
+										<meta itemprop="offerCount" content="1">
+										<meta itemprop="price" content="13699">
+										<meta itemprop="lowPrice" content="13699">
+										<meta itemprop="priceCurrency" content="RUR">
+
+										<div class="col-12 col-md-8 mt-2 mt-md-0 flex-grow-1">
+											<div class="d-flex justify-content-around justify-content-md-start">
+												<a href="candy-cs4-1051d1-2-07.html" class="font-weight-bold">Candy CS4
+													1051D1/2-07</a>
+												<span class="price ml-md-3">13 699 руб.</span>
+												<span class="old_price ml-md-3">15 000 руб.</span>
+											</div>
+											<div
+												class="flags mt-2 d-flex justify-content-around justify-content-md-start">
+												<span class="badge badge-secondary badge-pill mr-md-1">Новинка</span>
+												<span class="badge badge-secondary badge-pill mr-md-1">Популярный
+													товар</span>
+											</div>
+										</div>
+										<div class="col-12 col-md-4 mt-2 mt-md-0 text-center text-md-right">
+											<button class="btn btn-primary" type="submit" name="ms2_action"
+												value="cart/add">
+												Добавить в корзину </button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="ms2_product mb-5 mb-md-3" itemtype="http://schema.org/Product" itemscope="">
+								<meta itemprop="description" content="Daewoo Electronics WM-1710ELW">
+								<meta itemprop="name" content="Daewoo Electronics WM-1710ELW">
+
+								<form method="post"
+									class="ms2_form d-flex flex-column flex-md-row align-items-center no-gutters">
+									<input type="hidden" name="id" value="12">
+									<input type="hidden" name="count" value="1">
+									<input type="hidden" name="options" value="[]">
+									<div class="col-md-2 text-center text-md-left">
+										<a href="daewoo-electronics-wm-1710elw.html">
+											<img src="/assets/images/products/12/small/36.jpg" class="mw-100"
+												alt="Daewoo Electronics WM-1710ELW"
+												title="Daewoo Electronics WM-1710ELW" itemprop="image">
+										</a>
+									</div>
+									<div class="col-md-10 d-flex flex-column flex-md-row align-items-center no-gutters"
+										itemtype="http://schema.org/AggregateOffer" itemprop="offers" itemscope="">
+										<meta itemprop="category" content="Стиральные машины">
+										<meta itemprop="name" content="Daewoo Electronics WM-1710ELW">
+										<meta itemprop="offerCount" content="1">
+										<meta itemprop="price" content="14250">
+										<meta itemprop="lowPrice" content="14250">
+										<meta itemprop="priceCurrency" content="RUR">
+
+										<div class="col-12 col-md-8 mt-2 mt-md-0 flex-grow-1">
+											<div class="d-flex justify-content-around justify-content-md-start">
+												<a href="daewoo-electronics-wm-1710elw.html"
+													class="font-weight-bold">Daewoo Electronics WM-1710ELW</a>
+												<span class="price ml-md-3">14 250 руб.</span>
+											</div>
+											<div
+												class="flags mt-2 d-flex justify-content-around justify-content-md-start">
+												<span class="badge badge-secondary badge-pill mr-md-1">Новинка</span>
+											</div>
+										</div>
+										<div class="col-12 col-md-4 mt-2 mt-md-0 text-center text-md-right">
+											<button class="btn btn-primary" type="submit" name="ms2_action"
+												value="cart/add">
+												Добавить в корзину </button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="ms2_product mb-5 mb-md-3" itemtype="http://schema.org/Product" itemscope="">
+								<meta itemprop="description" content="DEXP WM-F610NMA/WW">
+								<meta itemprop="name" content="DEXP WM-F610NMA/WW">
+
+								<form method="post"
+									class="ms2_form d-flex flex-column flex-md-row align-items-center no-gutters">
+									<input type="hidden" name="id" value="11">
+									<input type="hidden" name="count" value="1">
+									<input type="hidden" name="options" value="[]">
+									<div class="col-md-2 text-center text-md-left">
+										<a href="dexp-wm-f610nma-ww.html">
+											<img src="/assets/images/products/11/small/56.jpg" class="mw-100"
+												alt="DEXP WM-F610NMA/WW" title="DEXP WM-F610NMA/WW" itemprop="image">
+										</a>
+									</div>
+									<div class="col-md-10 d-flex flex-column flex-md-row align-items-center no-gutters"
+										itemtype="http://schema.org/AggregateOffer" itemprop="offers" itemscope="">
+										<meta itemprop="category" content="Стиральные машины">
+										<meta itemprop="name" content="DEXP WM-F610NMA/WW">
+										<meta itemprop="offerCount" content="1">
+										<meta itemprop="price" content="14999">
+										<meta itemprop="lowPrice" content="14999">
+										<meta itemprop="priceCurrency" content="RUR">
+
+										<div class="col-12 col-md-8 mt-2 mt-md-0 flex-grow-1">
+											<div class="d-flex justify-content-around justify-content-md-start">
+												<a href="dexp-wm-f610nma-ww.html" class="font-weight-bold">DEXP
+													WM-F610NMA/WW</a>
+												<span class="price ml-md-3">14 999 руб.</span>
+												<span class="old_price ml-md-3">15 500 руб.</span>
+											</div>
+											<div
+												class="flags mt-2 d-flex justify-content-around justify-content-md-start">
+												<span class="badge badge-secondary badge-pill mr-md-1">Популярный
+													товар</span>
+											</div>
+										</div>
+										<div class="col-12 col-md-4 mt-2 mt-md-0 text-center text-md-right">
+											<button class="btn btn-primary" type="submit" name="ms2_action"
+												value="cart/add">
+												Добавить в корзину </button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="ms2_product mb-5 mb-md-3" itemtype="http://schema.org/Product" itemscope="">
+								<meta itemprop="description" content="Indesit IWSD 51051 CIS">
+								<meta itemprop="name" content="Indesit IWSD 51051 CIS">
+
+								<form method="post"
+									class="ms2_form d-flex flex-column flex-md-row align-items-center no-gutters">
+									<input type="hidden" name="id" value="13">
+									<input type="hidden" name="count" value="1">
+									<input type="hidden" name="options" value="[]">
+									<div class="col-md-2 text-center text-md-left">
+										<a href="indesit-iwsd-51051-cis.html">
+											<img src="/assets/images/products/13/small/46.jpg" class="mw-100"
+												alt="Indesit IWSD 51051 CIS" title="Indesit IWSD 51051 CIS"
+												itemprop="image">
+										</a>
+									</div>
+									<div class="col-md-10 d-flex flex-column flex-md-row align-items-center no-gutters"
+										itemtype="http://schema.org/AggregateOffer" itemprop="offers" itemscope="">
+										<meta itemprop="category" content="Стиральные машины">
+										<meta itemprop="name" content="Indesit IWSD 51051 CIS">
+										<meta itemprop="offerCount" content="1">
+										<meta itemprop="price" content="17510">
+										<meta itemprop="lowPrice" content="17510">
+										<meta itemprop="priceCurrency" content="RUR">
+
+										<div class="col-12 col-md-8 mt-2 mt-md-0 flex-grow-1">
+											<div class="d-flex justify-content-around justify-content-md-start">
+												<a href="indesit-iwsd-51051-cis.html" class="font-weight-bold">Indesit
+													IWSD 51051 CIS</a>
+												<span class="price ml-md-3">17 510 руб.</span>
+											</div>
+											<div
+												class="flags mt-2 d-flex justify-content-around justify-content-md-start">
+											</div>
+										</div>
+										<div class="col-12 col-md-4 mt-2 mt-md-0 text-center text-md-right">
+											<button class="btn btn-primary" type="submit" name="ms2_action"
+												value="cart/add">
+												Добавить в корзину </button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="ms2_product mb-5 mb-md-3" itemtype="http://schema.org/Product" itemscope="">
+								<meta itemprop="description" content="Indesit IWUD 4085">
+								<meta itemprop="name" content="Indesit IWUD 4085">
+
+								<form method="post"
+									class="ms2_form d-flex flex-column flex-md-row align-items-center no-gutters">
+									<input type="hidden" name="id" value="10">
+									<input type="hidden" name="count" value="1">
+									<input type="hidden" name="options" value="[]">
+									<div class="col-md-2 text-center text-md-left">
+										<a href="indesit-iwud-4085.html">
+											<img src="/assets/images/products/10/small/17.jpg" class="mw-100"
+												alt="Indesit IWUD 4085" title="Indesit IWUD 4085" itemprop="image">
+										</a>
+									</div>
+									<div class="col-md-10 d-flex flex-column flex-md-row align-items-center no-gutters"
+										itemtype="http://schema.org/AggregateOffer" itemprop="offers" itemscope="">
+										<meta itemprop="category" content="Стиральные машины">
+										<meta itemprop="name" content="Indesit IWUD 4085">
+										<meta itemprop="offerCount" content="1">
+										<meta itemprop="price" content="13999">
+										<meta itemprop="lowPrice" content="13999">
+										<meta itemprop="priceCurrency" content="RUR">
+
+										<div class="col-12 col-md-8 mt-2 mt-md-0 flex-grow-1">
+											<div class="d-flex justify-content-around justify-content-md-start">
+												<a href="indesit-iwud-4085.html" class="font-weight-bold">Indesit IWUD
+													4085</a>
+												<span class="price ml-md-3">13 999 руб.</span>
+											</div>
+											<div
+												class="flags mt-2 d-flex justify-content-around justify-content-md-start">
+												<span
+													class="badge badge-secondary badge-pill mr-md-1">Рекомендуем</span>
+											</div>
+										</div>
+										<div class="col-12 col-md-4 mt-2 mt-md-0 text-center text-md-right">
+											<button class="btn btn-primary" type="submit" name="ms2_action"
+												value="cart/add">
+												Добавить в корзину </button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="ms2_product mb-5 mb-md-3" itemtype="http://schema.org/Product" itemscope="">
+								<meta itemprop="description" content="IP-телефон D-link DPH-400S">
+								<meta itemprop="name" content="IP-телефон D-link DPH-400S">
+
+								<form method="post"
+									class="ms2_form d-flex flex-column flex-md-row align-items-center no-gutters">
+									<input type="hidden" name="id" value="167">
+									<input type="hidden" name="count" value="1">
+									<input type="hidden" name="options" value="[]">
+									<div class="col-md-2 text-center text-md-left">
+										<a href="ip-telephone-d-link-dph-400s-473.html">
+											<img src="/assets/images/products/167/small/83-147-thickbox.jpg"
+												class="mw-100" alt="IP-телефон D-link DPH-400S"
+												title="IP-телефон D-link DPH-400S" itemprop="image">
+										</a>
+									</div>
+									<div class="col-md-10 d-flex flex-column flex-md-row align-items-center no-gutters"
+										itemtype="http://schema.org/AggregateOffer" itemprop="offers" itemscope="">
+										<meta itemprop="category" content="Нецелые цены">
+										<meta itemprop="name" content="IP-телефон D-link DPH-400S">
+										<meta itemprop="offerCount" content="1">
+										<meta itemprop="price" content="124">
+										<meta itemprop="lowPrice" content="124">
+										<meta itemprop="priceCurrency" content="RUR">
+
+										<div class="col-12 col-md-8 mt-2 mt-md-0 flex-grow-1">
+											<div class="d-flex justify-content-around justify-content-md-start">
+												<a href="ip-telephone-d-link-dph-400s-473.html"
+													class="font-weight-bold">IP-телефон D-link DPH-400S</a>
+												<span class="price ml-md-3">124 руб.</span>
+												<span class="old_price ml-md-3">124 руб.</span>
+											</div>
+											<div
+												class="flags mt-2 d-flex justify-content-around justify-content-md-start">
+											</div>
+											<div class="mt-2 text-center text-md-left">
+												<small>IP-телефон D-link DPH-400S</small>
+											</div>
+										</div>
+										<div class="col-12 col-md-4 mt-2 mt-md-0 text-center text-md-right">
+											<button class="btn btn-primary" type="submit" name="ms2_action"
+												value="cart/add">
+												Добавить в корзину </button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="mse2_pagination">
+							<ul class="pagination">
+								<li class="page-item disabled"><a class="page-link" href="#">Первая</a></li>
+								<li class="page-item disabled"><a class="page-link" href="#">«</a></li>
+								<li class="page-item active"><a class="page-link" href="3/?sort=pagetitle%3Aasc">1</a>
+								</li>
+								<li class="page-item"><a class="page-link"
+										href="3/?page=2&amp;sort=pagetitle%3Aasc">2</a></li>
+								<li class="page-item"><a class="page-link"
+										href="3/?page=3&amp;sort=pagetitle%3Aasc">3</a></li>
+								<li class="page-item"><a class="page-link"
+										href="3/?page=4&amp;sort=pagetitle%3Aasc">4</a></li>
+								<li class="page-item"><a class="page-link"
+										href="3/?page=5&amp;sort=pagetitle%3Aasc">5</a></li>
+								<li class="page-item"><a class="page-link"
+										href="3/?page=2&amp;sort=pagetitle%3Aasc">»</a></li>
+								<li class="page-item"><a class="page-link"
+										href="3/?page=14&amp;sort=pagetitle%3Aasc">Последняя</a></li>
+							</ul>
+						</div>
+						<div class="row category-description-text">
+							<div class="col">
+							</div>
 						</div>
 					</div>
 				</div>

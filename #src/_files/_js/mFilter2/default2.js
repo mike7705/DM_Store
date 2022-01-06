@@ -108,6 +108,13 @@ var mSearch2 = {
                 }
             }
         });
+        $(document).on('change', '#mse2_sort', function() {
+            var selected = $(this).find('option:selected');
+            var sort = selected.data('sort');
+            sort += mse2Config.method_delimeter + selected.val();
+            mse2Config.sort =  sort;
+            mSearch2.submit();
+        });
         //$('.btn-filter').on("change","input[id")
         for (i in this.startParams) {
             if (this.startParams.hasOwnProperty(i) && this.options.reset_skip.indexOf(i) === -1) {
@@ -375,6 +382,16 @@ var mSearch2 = {
                 range: true,
                 step: 1 / delimiter,
                 stop: function (e, ui) {
+                    console.log({e,ui})
+                    let target = e.target;
+                    if (target){
+                        let id = $(target).data('filter').replace(mse2Config['filter_delimeter'], "\\" + mse2Config['filter_delimeter']);
+                        var elem = $('#' + id + ' .btn-filter');
+                        if (elem[0] && !elem[0].classList.contains(mSearch2.options.active_class)){
+                            elem[0].classList.add(mSearch2.options.active_class)
+                        }
+                    }
+
                     imin.val(ui.values[0].toFixed(decimals));
                     imax.val(ui.values[1].toFixed(decimals));
                     imin.add(imax).trigger('change');
@@ -1162,28 +1179,58 @@ var mSearch2 = {
         var hash = this.Hash.get();
         if (hash.hasOwnProperty(filter)) {
             this.Hash.remove(filter);
-            if (this.sliders.hasOwnProperty(filter)) {
-                this.sliders[filter]['changed'] =
-                    this.sliders[filter]['user_changed'] = false;
-            }
+
             let selector = (this.options.prefix + filter).replace(mse2Config['filter_delimeter'], "\\" + mse2Config['filter_delimeter']);
             let elem = $('#' + selector);
             let filterButton = $('#' + selector + ' .btn-filter');
 
-
             if (elem[0]) {
+                if (this.sliders.hasOwnProperty(filter)) {
+                    if (this.sliders[filter]['user_changed']){
+                        //let sliderRange = $(elem[0]).find('.ui-slider-range');
+                        //sliderRange.css({'left': '0%', 'width': '100%'});
+                        let slider = document.querySelector('#' + selector);
+                        let sliderRange = slider.querySelector('.ui-slider-range');
+                        sliderRange.style.left = '0%';
+                        sliderRange.style.width = '100%';
+                        let sliderHandlers = slider.querySelectorAll('.ui-slider-handle');
+                        for (let i = 0; i < sliderHandlers.length; i++){
+                            if (i==0){
+                                sliderHandlers[i].style.left = '0';
+                            } else {
+                                sliderHandlers[i].style.left = '100%';
+                            }
+                        }
+                        /*
+                        sliderHandlers.each(function (index) {
+                            if (!index) {
+                                $(this).css({'left': '0%'})
+                            } else {
+                                $(this).css({'left': '100%'}).trigger('stop')
+                            }
+                        })
+
+                         */
+                    }
+
+                    this.sliders[filter]['changed'] =
+                        this.sliders[filter]['user_changed'] = false;
+                    //$(elem[0]).find('.ui-slider').trigger()
+                }
                 let links = $(elem[0]).find('[id^="' + selector + '_"]');
                 //console.log(links)
+
                 if (links.length){
                     links.each(function () {
+                        console.log(links)
                         if (this){
-                            //console.log(this)
+                            console.log(this)
                             switch (this.tagName) {
                             case 'INPUT':
-                                $(this).prop('checked', false).trigger('change');
+                                $(this).prop('checked', false)//.trigger('change');
                                 break;
                             case 'SELECT':
-                                $(this).val($(this).find('option:first').prop('value')).trigger('change');
+                                $(this).val($(this).find('option:first').prop('value'))//.trigger('change');
                                 break;
                             }
                         }

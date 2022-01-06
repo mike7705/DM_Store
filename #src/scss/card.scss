@@ -1,0 +1,14 @@
+.card-body {
+    & .swiper-container .swiper-pagination {
+        width: 100%;
+        @include flex;
+        & > .swiper-pagination-bullet {
+            height: 4px;
+            width: 100%;
+            border-radius: 0;
+            margin-left: 1px;
+            margin-right: 1px;
+            flex-grow: 1;
+        }
+    }
+}

@@ -65,7 +65,8 @@ if (location.hash) {
 }
 //=================
 //Dropdown 
-let sortFilter = document.querySelectorAll(".sort-filter-value");
+/*
+let sortFilter = document.querySelectorAll(".filter-value");
 console.log(sortFilter)
 if (sortFilter.length > 0) {
 	for (let index = 0; index < sortFilter.length; index++) {
@@ -78,7 +79,7 @@ if (sortFilter.length > 0) {
 			let c = d.previousElementSibling
 			console.log({ t, c, d })
 			const classes = c.classList;
-			if (classes.contains("btn-sort-filter")) {
+			if (classes.contains("btn-filter")) {
 				let ct = c.innerHTML
 				let et = t.innerHTML
 				console.log({ classes, ct, et })
@@ -90,6 +91,8 @@ if (sortFilter.length > 0) {
 		});
 	}
 }
+*/
+
 
 
 /*if (e.target)

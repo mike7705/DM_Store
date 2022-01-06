@@ -1,5 +1,5 @@
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
-let forms = document.querySelectorAll('form');
+let forms = document.querySelectorAll('form:not([id^="mse2_"])');
 if (forms.length > 0) {
 	for (let index = 0; index < forms.length; index++) {
 		const el = forms[index];
@@ -53,6 +53,7 @@ async function form_submit(e) {
 		e.preventDefault();
 	}
 }
+
 function form_validate(form) {
 	let error = 0;
 	let form_req = form.querySelectorAll('._req');
@@ -157,6 +158,35 @@ for (let index = 0; index < viewPass.length; index++) {
 }
 
 //Select
+/*
+const selectSingle = document.querySelector('.__select');
+const selectSingle_title = selectSingle.querySelector('.__select__title');
+const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
+
+
+// Toggle menu
+selectSingle_title.addEventListener('click', () => {
+	if ('active' === selectSingle.getAttribute('data-state')) {
+		selectSingle.setAttribute('data-state', '');
+	} else {
+		selectSingle.setAttribute('data-state', 'active');
+	}
+});
+
+// Close when click to option
+for (let i = 0; i < selectSingle_labels.length; i++) {
+	selectSingle_labels[i].addEventListener('click', (evt) => {
+		selectSingle_title.textContent = evt.target.textContent;
+		selectSingle.setAttribute('data-state', '');
+	});
+}
+
+// Reset title
+const selectReset = document.querySelector('.__select__reset');
+selectReset.addEventListener('click', () => {
+	selectSingle_title.textContent = selectSingle_title.getAttribute('data-default');
+});
+
 let selects = document.getElementsByTagName('select');
 if (selects.length > 0) {
 	selects_init();
@@ -345,7 +375,7 @@ function selects_update_all() {
 		}
 	}
 }
-
+*/
 //Placeholers
 let inputs = document.querySelectorAll('input[data-value],textarea[data-value]');
 inputs_init(inputs);

@@ -169,6 +169,7 @@ body {
 @import "home";
 @import "utils";
 @import "jquery-ui.min";
+@import "card";
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
@@ -367,6 +368,14 @@ body {
 .aside__content {
 	& .category__filters {
 		& .common__filters {
+			& .form-select {
+				font-size: 0.85rem;
+			}
+			& .form-select:focus {
+				border-color: $primary;
+				outline: 0;
+				box-shadow: none;
+			}
 			& .dropdown-item {
 				&.active {
 					background-color: #555;
@@ -382,12 +391,83 @@ body {
 		& .category__products {
 		}
 	}
+	& label {
+		font-size: 0.85rem;
+	}
 }
-.btn-filter {
-	line-height: 1.7rem;
-	padding: 2px 10px;
+.category__content .btn-filter {
+	//line-height: 1.7rem;
+	//padding: 2px 10px;
 	text-transform: none;
-	//color: #333;
+	&:hover:not(.show) {
+		border-right-color: transparent;
+		box-shadow: $box-shadow-hover-sm;
+	}
+	&.active + a.reset-current-filter {
+		//visibility: visible;
+		display: inline-block;
+		background-color: $primary;
+	}
+}
+.category__content .reset-current-filter:hover {
+	background-color: #5073e1;
+}
+.category__content .reset-current-filter::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	width: 1px;
+	background: rgba(255, 255, 255, 0.1);
+}
+.category__content .reset-current-filter {
+	//visibility: hidden;
+	display: none;
+	& a i {
+		line-height: inherit;
+		vertical-align: middle;
+		display: inline-block;
+		&::before {
+			vertical-align: middle;
+		}
+	}
+}
+.category__content .dropdown-toggle::after {
+	margin-left: 0.5em;
+	vertical-align: middle;
+}
+#mse2_filters .dropdown-menu {
+	max-height: 300px;
+	overflow-y: scroll;
+	& label {
+		& {
+			color: #333;
+		}
+		&.disabled {
+			color: #999;
+		}
+	}
+	& input {
+		font-size: 0.8rem;
+	}
+	.ui-slider-horizontal {
+		height: 0.5em;
+	}
+}
+
+.category__content .btn-filter {
+	padding: 4px 10px 5px;
+	&:hover {
+		box-shadow: $box-shadow-sm;
+	}
+}
+#mse2_filters .slider-filter,
+#mse2_filters .checkbox-filter {
+	display: block;
+	//line-height: 2.5rem;
+	padding: 0 0.4rem 0.4rem 0;
 }
 
 // aside ==========================================================================================
