@@ -3,6 +3,7 @@
 <div class="container">
 
     {'mFilter2' | snippet : [
+    'paginator' => 'pdoPage@mfilter2',
     'class' => 'msProduct',
     'element' => 'msProducts',
     'parents' => $_modx->resource.id,
@@ -10,6 +11,7 @@
     'aliases' => '
     resource|parent-categories==categories,
     ',
+    'limit' => 12,
     'filters' => '
     ms|price:number,
     ms|vendor:vendors,

@@ -18,6 +18,8 @@ $my-grays: (
     "111": #111111,
 );
 
+$gray-900: #909090;
+
 $blue: #365edc;
 $indigo: #6610f2;
 $purple: #6f42c1;
@@ -37,8 +39,8 @@ $gray-333: #333333;
 $gray-555: #555555;
 $gray-666: #666666;
 $gray-999: #666666;
-$light: #111111;
-$dark: #666666;
+$light: $gray-100;
+$dark: $gray-900;
 
 $theme-color: (
     "primary": #365edc,
@@ -57,6 +59,7 @@ $theme-color: (
 // Colors --------------------------------------------------------
 $aspect-ratio: (
     "2x3": calc(3 / 2 * 100%),
+    "5x1": calc(1 / 5 * 100%),
 );
 // Options
 $enable-shadows: true;

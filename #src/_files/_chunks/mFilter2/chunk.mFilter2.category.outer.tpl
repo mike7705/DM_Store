@@ -6,14 +6,19 @@
     'level' => 1,
     'limit' => 4,
     'templates' => 3,
-    'tplOuter' => '@INLINE <div class="row category__description mb-4">
-        <div class=" sub-categories mb-4">[[+wrapper]]</div>
+    'tplOuter' => '@INLINE <div class=" category__description mb-4 pl-2">
+        <div class=" sub-categories mb-4 row border-start border-top">[[+wrapper]]</div>
     </div>',
     'tpl' => '@INLINE
-    <div class="sub-category-item col col-xl-3 col-lg-4 col-md-6 ">
+    <div class="sub-category-item col col-xl-3 col-lg-4 col-md-6 border-right border-bottom">
         <div class="sub-category-wrapper d-flex pl-2">
             <div class="flex-shrink-0"><a href="[[+link]]" class="sub-category-link">
-                    <img src="https://placekitten.com/40" alt=""></a>
+                    [[!getPageAssets?
+                    &page_id=`[[+id]]`
+                    &innerTpl=`category.assman`
+                    &outerTpl=`category.assman.outer`
+                    &is_image=`1`
+                    &limit=`1`]]
             </div>
             <div class="flex-grow-1 pl-3">
                 <a href="[[+link]]" class="sub-category-link">[[+menutitle:empty=`[[+pagetitle]]`]]</a>
@@ -28,6 +33,7 @@
             </div>
         </div>
     </div>',
+    'sortby' => 'RAND()',
     'showLog' => 0,
     ])}
     <div class="row category__content ">
@@ -201,8 +207,8 @@
             </div>
         </div>
         <div class="col co-md-6 col-lg-9 col-xxl-10- order-lg-3 order-md-2 aside__content">
-            <div class="category__filters">
-                <div class="common__filters d-flex flex-wrap justify-content-between pt-3">
+            <div class="category__filters mb-3">
+                <div class="common__filters d-flex flex-wrap justify-content-between pt-3 ">
                     <div class="sort-filters form-group">
                         <label for="mse2_sort">{'mse2_sort' | lexicon}</label>
                         <select name="mse_sort" id="mse2_sort" class="form-select ">
@@ -217,32 +223,33 @@
                         </select>
                     </div>
                     <div class="quantity-filters form-group">
-                        <label for="mse2_limit">{'mse2_limit' | lexicon}</label>
+                        <label for="mse2_limit">{'mse2_limit' | lexicon}:</label>
                         <select name="mse_limit" id="mse2_limit" class="form-select">
-                            {foreach [10, 25, 50, 100] as $v}
+                            {foreach [12, 24, 48, 96] as $v}
                             <option value="{$v}" {if $limit==$v} selected{/if}>{$v}</option>
                             {/foreach}
                         </select>
                     </div>
                     {if $tpls}
-                    <div class="view-filters">
-                        <div id="mse2_tpl" class="col-md-6">
-                            <a href="#" data-tpl="0" class="{$tpl0}" title="плиткой"><svg
+                    <div class="view-filters d-flex form-group">
+                        <label for="mse2_tpl" class="pr-2 align-self-end mb-0">Вид:</label>
+                        <div id="mse2_tpl" class="text-left align-self-end">
+                            <a href="#" data-tpl="0" class="{$tpl0} text-secondary pr-2" title="плитка"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10">
-                                    <path data-name="Rounded Rectangle 917 copy 3" class="cls-1"
+                                    <path
                                         d="M1566,603h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1566,603Zm5,0h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1571,603Zm5,0h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1576,603Zm-10,4h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1566,607Zm5,0h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1571,607Zm5,0h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1576,607Zm-10,4h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1566,611Zm5,0h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1571,611Zm5,0h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1576,611Z"
                                         transform="translate(-1565 -603)"></path>
-                                </svg></a> /
-                            <a href="#" data-tpl="1" class="{$tpl1}" title="списком"><i class="svg  svg-inline-type"
-                                    aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="10"
-                                        viewBox="0 0 13 10">
-                                        <path data-name="Rounded Rectangle 917" class="cls-1"
+                                </svg></a>
+                            <a href="#" data-tpl="1" class="{$tpl1} text-secondary pr-2" title="список"><i
+                                    class="svg  svg-inline-type" aria-hidden="true"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10">
+                                        <path
                                             d="M1594,603h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1594,603Zm5,0h6a1,1,0,0,1,0,2h-6A1,1,0,0,1,1599,603Zm-5,4h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1594,607Zm5,0h6a1,1,0,0,1,0,2h-6A1,1,0,0,1,1599,607Zm-5,4h1a1,1,0,0,1,0,2h-1A1,1,0,0,1,1594,611Zm5,0h6a1,1,0,0,1,0,2h-6A1,1,0,0,1,1599,611Z"
                                             transform="translate(-1593 -603)"></path>
                                     </svg></i></a>
-                            <a href="#" data-tpl="2" class="{$tpl2}" title="таблицей"><svg
+                            <a href="#" data-tpl="2" class="{$tpl2} text-secondary pr-2" title="таблица"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10">
-                                    <path data-name="Rounded Rectangle 918 copy 2" class="cls-1"
+                                    <path
                                         d="M1621.5,603h2a0.5,0.5,0,0,1,0,1h-2A0.5,0.5,0,0,1,1621.5,603Zm5,0h7a0.5,0.5,0,0,1,0,1h-7A0.5,0.5,0,0,1,1626.5,603Zm-5,3h2a0.5,0.5,0,0,1,0,1h-2A0.5,0.5,0,0,1,1621.5,606Zm5,0h7a0.5,0.5,0,0,1,0,1h-7A0.5,0.5,0,0,1,1626.5,606Zm-5,3h2a0.5,0.5,0,0,1,0,1h-2A0.5,0.5,0,0,1,1621.5,609Zm5,0h7a0.5,0.5,0,0,1,0,1h-7A0.5,0.5,0,0,1,1626.5,609Zm-5,3h2a0.5,0.5,0,0,1,0,1h-2A0.5,0.5,0,0,1,1621.5,612Zm5,0h7a0.5,0.5,0,0,1,0,1h-7A0.5,0.5,0,0,1,1626.5,612Z"
                                         transform="translate(-1621 -603)"></path>
                                 </svg></a>
@@ -252,32 +259,48 @@
 
                 </div>
             </div>
-            <h3>{'mse2_filter_total' | lexicon} <span class="mse2_total">{$total ?: 0}</span></h3>
-            <div class="row">
+            <div class="accordion d-none d-md-block" id="accordionFilter">
+                <div class="accordion-item">
+                    <h6 class="accordion-header" id="headingFilter">
+                        <button class=" btn-sm py-2  btn-outline-primary accordion-button" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFilterBlock" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            <i class="bi bi-funnel pr-2 pl-3"></i>
+                            <span class="d-none d-md-inline-block">Фильтры</span>
+                        </button>
+                    </h6>
+                    <div id="collapseFilterBlock" class="accordion-collapse collapse p-4"
+                        aria-labelledby="headingFilter" data-bs-parent="#accordionFilter">
+                        <div class="accordion-body">
+                            <form action="{$_modx->resource.id | url}" method="post" id="mse2_filters" class="mb-3">
+                                <div class="">
+                                    {$filters}
+                                </div>
+                                {if $filters}
+                                <div class="d-flex justify-content-between">
+                                    <button type="reset" class="btn btn-secondary hidden">{'mse2_reset' |
+                                        lexicon}</button>
+                                    <button type="submit" class="btn btn-primary hidden">{'mse2_submit' |
+                                        lexicon}</button>
+                                </div>
+                                {/if}
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <form action="{$_modx->resource.id | url}" method="post" id="mse2_filters">
-                <div>
-                    {$filters}
-                </div>
-                {if $filters}
-                <div class="d-flex justify-content-between">
-                    <button type="reset" class="btn btn-light hidden">{'mse2_reset' | lexicon}</button>
-                    <button type="submit" class="btn btn-primary hidden">{'mse2_submit' | lexicon}</button>
-                </div>
-                {/if}
-            </form>
             <div id="mse2_selected_wrapper">
                 <div id="mse2_selected">
                     {'mse2_selected' | lexicon}:<span></span>
                 </div>
             </div>
 
-            <div id="mse2_results" class="card-group border-1 border-start border-top "
+            <div id="mse2_results" class="card-group border-1 border-start border-top mb-5"
                 style="border-color: rgba(0, 0, 0, 0.125);">
                 {$results}
             </div>
 
-            <div class="mse2_pagination">
+            <div class="mse2_pagination text-center mb-5">
                 {'page.nav' | placeholder}
             </div>
             <div class="row category-description-text">

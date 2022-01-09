@@ -201,12 +201,12 @@ body {
 			display: table-cell;
 			border-collapse: collapse;
 			padding: 1.5rem;
-			border-top: 1px solid #ececec;
-			border-left: none;
+			//border-top: 1px solid #ececec;
+			//border-left: none;
 			border-right: 1px solid #ececec;
 			border-bottom: 1px solid #ececec;
 			&:first-child {
-				border-left: 1px solid #ececec;
+				//border-left: 1px solid #ececec;
 			}
 			&:hover {
 				box-shadow: $box-shadow-hover-lg;
@@ -468,6 +468,16 @@ body {
 	display: block;
 	//line-height: 2.5rem;
 	padding: 0 0.4rem 0.4rem 0;
+}
+#mse2_filters button[type="reset"],
+#mse2_filters button[type="submit"] {
+	font-size: 1rem;
+}
+#mse2_selected {
+	font-size: 1rem;
+}
+#collapseFilterBlock:hover::after {
+	color: white;
 }
 
 // aside ==========================================================================================

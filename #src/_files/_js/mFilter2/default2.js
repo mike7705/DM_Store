@@ -52,6 +52,8 @@ var mSearch2 = {
             return false;
         }
         var i;
+        //console.log(swiperProductGallery)
+        //console.log(swiperProductImages)
         if (mse2Config['filterOptions'] != undefined && Object.keys(mse2Config['filterOptions']).length > 0) {
             for (i in mse2Config['filterOptions']) {
                 if (mse2Config['filterOptions'].hasOwnProperty(i)) {
@@ -133,10 +135,22 @@ var mSearch2 = {
             $(document).on('change', selectors.join(', '), function () {
                 let name = $(this).attr('name').replace(mse2Config['filter_delimeter'], "\\" + mse2Config['filter_delimeter']);
                 let selector = "#" + mSearch2.options.prefix + name + " .btn-filter";
+                let filter = document.querySelector("#" + mSearch2.options.prefix + name);
+                let checked = false;
+                if (filter) {
+                    let filterInputs = document.querySelectorAll('input[id^="' + mSearch2.options.prefix + name + '_"]');
+                    if (filterInputs.length > 0) {
+                        filterInputs.forEach(function (currentValue) {
+                            //console.log(currentValue)
+                            checked |= $(currentValue).prop('checked');
+                        })
+                    }
+                }
                 let elem = $(selector)
                 //console.log(elem);
                 if (elem[0]) {
-                    if (!$(elem[0]).hasClass(mSearch2.options.active_class)) $(elem[0]).addClass(mSearch2.options.active_class);
+                    if (!$(elem[0]).hasClass(mSearch2.options.active_class) && checked) $(elem[0]).addClass(mSearch2.options.active_class);
+                    if ($(elem[0]).hasClass(mSearch2.options.active_class) && !checked) $(elem[0]).removeClass(mSearch2.options.active_class);
                 }
                 mSearch2.handleSelected($(this));
             });
@@ -327,6 +341,7 @@ var mSearch2 = {
 
     handleTpl: function () {
         $(document).on('click', this.options.tpl_link, function () {
+
             if (!$(this).hasClass(mSearch2.options.active_class)) {
                 $(mSearch2.options.tpl_link).removeClass(mSearch2.options.active_class);
                 $(this).addClass(mSearch2.options.active_class);
@@ -341,6 +356,17 @@ var mSearch2 = {
                 }
                 mSearch2.Hash.set(params);
                 mSearch2.load(params);
+            }
+            if (swiperProductImages !== undefined){
+                //
+
+                if (swiperProductImages.length > 0){
+                    swiperProductImages.forEach(function (swiper) {
+                        swiper.destroy();
+                    })
+                }
+                swiperProductImages = new Swiper('.product-images', swiperProductConfig)
+                console.log(swiperProductImages);
             }
 
             return false;
@@ -383,12 +409,27 @@ var mSearch2 = {
                 step: 1 / delimiter,
                 stop: function (e, ui) {
                     console.log({e,ui})
+                    let firstElem,secondElem
+                    if (ui.handleIndex !== undefined && ui.handleIndex){
+                        firstElem = ui.handle.previousElementSibling
+                        secondElem = ui.handle
+
+                    } else if (ui.handleIndex !== undefined){
+                        firstElem = ui.handle
+                        secondElem = ui.handle.nextElementSibling
+                        //console.log({hn})
+                    }
+                    //let hn = ui.handle.style.left;
+                    console.log({firstElem,secondElem})
                     let target = e.target;
                     if (target){
                         let id = $(target).data('filter').replace(mse2Config['filter_delimeter'], "\\" + mse2Config['filter_delimeter']);
                         var elem = $('#' + id + ' .btn-filter');
-                        if (elem[0] && !elem[0].classList.contains(mSearch2.options.active_class)){
+                        if (elem[0] && !elem[0].classList.contains(mSearch2.options.active_class) && (firstElem.style.left !== '0%' || secondElem.style.left !== '100%')) {
                             elem[0].classList.add(mSearch2.options.active_class)
+                        }
+                        if (elem[0] && elem[0].classList.contains(mSearch2.options.active_class) && firstElem.style.left === '0%' && secondElem.style.left === '100%') {
+                            elem[0].classList.remove(mSearch2.options.active_class)
                         }
                     }
 
@@ -1222,9 +1263,9 @@ var mSearch2 = {
 
                 if (links.length){
                     links.each(function () {
-                        console.log(links)
+                        //console.log(links)
                         if (this){
-                            console.log(this)
+                            //console.log(this)
                             switch (this.tagName) {
                             case 'INPUT':
                                 $(this).prop('checked', false)//.trigger('change');

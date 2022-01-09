@@ -1,14 +1,101 @@
-.card-body {
-    & .swiper-container .swiper-pagination {
-        width: 100%;
-        @include flex;
-        & > .swiper-pagination-bullet {
-            height: 4px;
-            width: 100%;
-            border-radius: 0;
-            margin-left: 1px;
-            margin-right: 1px;
-            flex-grow: 1;
+.card-wrapper {
+}
+.m-1px {
+    //margin-left: 1px;
+    margin-right: 1px;
+}
+.card {
+    box-shadow: none;
+    //border-style: inset;
+    //z-index: 9;
+    &:hover {
+        box-shadow: $box-shadow-lg;
+        z-index: 10;
+        & .features.right-menu {
+            visibility: visible;
+        }
+    }
+    border-width: 1px;
+    border-style: solid;
+    border-right-color: #ececec;
+    border-bottom-color: #ececec;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    font-size: 1.1rem;
+    line-height: 1.65rem;
+    & .card-footer {
+        display: none;
+    }
+    &:hover .card-footer {
+        display: block;
+        //border-style: outset;
+        box-shadow: $box-shadow-lg;
+    }
+    &:hover {
+        border-right-color: #fff;
+        border-bottom-color: #fff;
+        border-top-color: #fff;
+        border-left-color: #fff;
+        //border-bottom: hidden;
+    }
+    & .features.top-menu {
+    }
+    & .features.right-menu {
+        visibility: hidden;
+    }
+    & .card-image-top-content {
+        & .swiper-container .swiper-pagination {
+            //width: 100%;
+            top: calc(100% + 5px);
+            left: 10%;
+            right: 10%;
+            @include flex;
+            & > .swiper-pagination-bullet {
+                height: 4px;
+                width: 100%;
+                border-radius: 0;
+                margin-left: 1px;
+                margin-right: 1px;
+                flex-grow: 1;
+            }
+        }
+    }
+    .card-body {
+        .card-raiting {
+        }
+        .card-title {
+            font-size: 1.1rem;
+            color: #333;
+            &:hover {
+                color: $primary;
+            }
+        }
+        .card-text {
+        }
+        .item-quantity {
+            font-size: 1rem;
+        }
+        .price {
+        }
+        .old_price {
+        }
+    }
+    .economy {
+        font-size: 0.65rem;
+        & .abs,
+        & .percent {
+            width: fit-content;
+        }
+        & .abs {
+            background-color: rgb(255, 248, 219);
+        }
+    }
+    .card-footer {
+        border-color: #ececec;
+        & form input,
+        & form input:focus {
+            outline: none;
+            box-shadow: none;
         }
     }
 }

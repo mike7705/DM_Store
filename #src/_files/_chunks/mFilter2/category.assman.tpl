@@ -1,0 +1,1 @@
+<img src="[[+asset_id:scale2w=`50`]]" alt=""></a>

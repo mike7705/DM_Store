@@ -350,6 +350,7 @@ section.main {
         //padding-right: 50px;
         @include adaptiv-value-to("padding-right", 40, 10, 140);
         & .features-top-wrapper {
+            //max-width: 70%;
             float: left;
             & .feature:first-child {
                 margin-left: 0 !important;
@@ -397,6 +398,7 @@ section.main {
                     line-height: 32px;
                     margin-bottom: 4px;
                     color: inherit;
+                    fill: inherit;
                     & > i {
                         color: rgb(153, 153, 153);
                     }
