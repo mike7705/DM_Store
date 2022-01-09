@@ -38,9 +38,9 @@
     ])}
     <div class="row category__content ">
 
-        <div class="col co-md-6 col-lg-3 col-xxl-2- order-lg-2 order-md-3 flex-sm column aside__left">
+        <div class="col-12 co-md-3 order-lg-3 flex-sm column aside__left">
             <div class="row">
-                <div class="aside__left-menu col col-md-6 col-lg-12">
+                <div class="aside__left-menu col col-sm-6 col-md-3 mb-4">
                     <div class="aside__left-menu-wrapper accordion accordion-flush" id="aside__left-resource-menu">
                         <div class="accordion-item">
                             <h6 class="accordion-header" id="resource-menu-heading">
@@ -118,7 +118,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="aside__left-banner col col-md-6 col-lg-12 mt-4">
+                <div class="aside__left-banner col col-sm-6 col-md-3 mb-4">
                     <div class="banner">
                         <div class="banner-top">
                             <div class="ratio ratio-1x1">
@@ -142,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="aside__left-info-button-group col col-md-6 col-lg-12 mt-4">
+                <div class="aside__left-info-button-group col col-sm-6 col-md-3 mb-4">
                     <div class="list-group">
                         <a type="button" class="list-group-item list-group-item-action " aria-current="true">
                             <i class="bi bi-telephone-inbound pr-2 text-primary"></i>
@@ -158,7 +158,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="aside__left-banner col col-md-6 col-lg-12 mt-4">
+                <div class="aside__left-banner col col-sm-6 col-md-3 mb-4">
                     <div class="banner">
                         <div class="banner-top">
                             <div class="d-flex flex-column justify-content-center p-3 text-center">
@@ -183,7 +183,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col col-md-6 col-lg-12 mt-4 mb-5">
+                <div class="col col-md-6 mb-5">
                     <div class="aside__left-side-news ">
                         <div class="side-news__title pb-4">
                             <a href="/blog/" class="font-medium">Статьи</a>
@@ -206,7 +206,7 @@
                 </div>
             </div>
         </div>
-        <div class="col co-md-6 col-lg-9 col-xxl-10- order-lg-3 order-md-2 aside__content">
+        <div class="col co-md-9  order-lg-2 aside__content">
             <div class="category__filters mb-3">
                 <div class="common__filters d-flex flex-wrap justify-content-between pt-3 ">
                     <div class="sort-filters form-group">

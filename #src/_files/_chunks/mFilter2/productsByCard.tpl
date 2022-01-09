@@ -73,16 +73,25 @@
                 </div>
             </div>
         </div>
-        <div class="card-footer px-0 position-absolute top-100 ratio ratio-5x1">
+        <div class="card-footer px-0 position-absolute top-100 ratio ratio-5x1 bg-light">
             <form class="ms2_form card-footer-wrapper d-flex flex-nowrap border-0 outline-0 p-0" method="post">
                 <input type="hidden" name="id" value="{$id}">
-                <div class="col-4 bg-light flex-shrink-0 border-0 outline-0">
-                    <input type="number" name="count" id="product_price"
-                        class="form-control h-100 w-100 rounded-0 outline-0 border-0" value="1" />
+                <div class="col-12 col-md-6 h-100">
+                    <div class="input-group __some-count-block mb-3 px-5 px-md-0 col-12 col-md-6 h-100 rounded-0">
+                        <button class="btn btn-small btn-outline-warning count-dec" type="button"
+                            onclick="this.nextElementSibling.stepDown(); $(this).next().trigger('change');"
+                            style="border-top-left-radius: 0;"><i class="bi bi-dash-lg"></i></button>
+                        <input type="number" name="count"
+                            class="form-control input-sm bg-light border-warning mb-0 text-center count-input h-100"
+                            min="1" placeholder="1" value="1">
+                        <button class="btn btn-small btn-outline-warning count-inc rounded-0" type="button"
+                            onclick="this.previousElementSibling.stepUp(); $(this).prev().trigger('change');"><i
+                                class="bi bi-plus-lg"></i></button>
+                    </div>
                 </div>
-                <div class="col-8 flex-shrink-1 flex-grow-1">
+                <div class="col-12 col-md-6 flex-shrink-1 flex-grow-1">
                     <button class="btn btn-primary h-100 w-100 rounded-0" type="submit" name="ms2_action"
-                        value="cart/add">
+                        value="cart/add" style="border-bottom-right-radius: 0.25rem !important;">
                         В корзину
                     </button>
                 </div>

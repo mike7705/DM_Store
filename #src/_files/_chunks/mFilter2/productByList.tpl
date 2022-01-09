@@ -14,7 +14,7 @@
                                     &filetype=`image`
                                     ]]
                                 </div>
-                                <div class="swiper-pagination  product-images-pagination d-flex"></div>
+                                <div class="swiper-pagination product-images-pagination d-flex"></div>
                             </div>
                         </div>
                     </div>
@@ -43,80 +43,82 @@
                         <div class="item-quantity">
                         </div>
                         <div class="card-text text-left d-flex flex-column justify-content-between text-dark">
-                            {$id | resource : 'content' | truncate : 200: '<br /><span class="text-secondary">читать
-                                дальше...</span>': true : false}
+                            {$id | resource : 'content' | truncate : 200: '<br /><a class="text-secondary"
+                                href="{$_modx->makeUrl($id)}">читать
+                                дальше...</a>': true : false}
                         </div>
                     </div>
-
                 </div>
             </div>
-            <form class="col-md-3 ms2_form card-footer-wrapper d-flex flex-column" method="post">
-                <input type="hidden" name="id" value="{$id}">
-                <div class="item-price mt-2 w-100">
-                    {if $price > 0}
-                    <div class="price w-100">
-                        <strong>{$price | price_format | replace : " " : "&nbsp;"} &#8381;</strong>
-                        {if $old_price > 0 && $old_price - $price > 1}
-                        <small class="old_price text-muted"><s>{$old_price}&nbsp;&#8381;</s></small>
-                    </div>
-                    <div class="economy row mx-0 px-0 text-center justify-content-start">
-                        {set $a = 100 * $old_price / $price - 100}
-                        <div class="col-3 bg-warning border border-warning rounded-start text-center percent">
-                            {$a | ereplace : '/\.\d+/' : ''}&nbsp;%</div>
-                        <div class="col-9 border border-warning rounded-end abs">Экономия
-                            {$old_price | replace : " " : "" - $price | replace : " " : ""} &#8381;
+            <form class="col-md-3 ms2_form card-footer-wrapper" method="post">
+                <div class="row">
+                    <input type="hidden" name="id" value="{$id}">
+                    <div class="item-price pt-3 w-100 mb-3">
+                        {if $price > 0}
+                        <div class="price w-100 mb-2  text-center text-md-start">
+                            <strong>{$price | price_format | replace : " " : "&nbsp;"} &#8381;</strong>
+                            {if $old_price > 0 && $old_price - $price > 1}
+                            <small class="old_price text-muted"><s>{$old_price}&nbsp;&#8381;</s></small>
+                        </div>
+                        <div class="economy row mx-0 px-0 text-center justify-content-center justify-content-md-start">
+                            {set $a = 100 * $old_price / $price - 100}
+                            <div class="col-3 bg-warning border border-warning rounded-start text-center percent">
+                                {$a | ereplace : '/\.\d+/' : ''}&nbsp;%</div>
+                            <div class="col-9 border border-warning rounded-end abs">Экономия
+                                {$old_price | replace : " " : "" - $price | replace : " " : ""} &#8381;
+                            </div>
+                            {/if}
                         </div>
                         {/if}
                     </div>
-                    {/if}
-                </div>
-                <div class="input-group lh-sm">
-                    <button class="btn btn-small btn-outline-primary" type="button">-</button>
-                    <input type="text" class="form-control input-sm input-primary mb-0" placeholder="1">
-                    <button class="btn btn-small btn-outline-primary" type="button">+</button>
-                </div>
-
-                <!--
-                    <div class="col-4 bg-light flex-shrink-0 border-0 outline-0">
-                        <input type="number" name="count" id="product_price"
-                            class="form-control h-100 w-100 rounded-0 outline-0 border-0" value="1" />
+                    <div class="col-12 col-md-9">
+                        <div class="input-group __some-count-block mb-3 px-5 px-md-0 col-12 col-md-6">
+                            <button class="btn btn-small btn-outline-primary count-dec" type="button"
+                                onclick="this.nextElementSibling.stepDown(); $(this).next().trigger('change');">-</button>
+                            <input type="number" name="count"
+                                class="form-control input-sm bg-light border-primary mb-0 text-center count-input"
+                                min="1" placeholder="1" value="1">
+                            <button class="btn btn-small btn-outline-primary count-inc" type="button"
+                                onclick="this.previousElementSibling.stepUp(); $(this).prev().trigger('change');">+</button>
+                        </div>
                     </div>
-                    <div class="col-8 flex-shrink-1 flex-grow-1">
-                        <label for="product-actions-{$id}" class="form-label">Количество:</label>
-                        <div class="btn-group" id="product-actions-{$id}">
-                            <input type="number" class="fit-content" placeholder="">-->
+                    <div class="col-12 col-md-9">
+                        <div
+                            class="d-grid gap-2 d-md-block input-group mt-0 mt-md-4 mb-2 mb-md-0 px-5 px-md-0 col-12 col-md-6">
+                            <button class="btn btn-primary w-100" type="submit" name="ms2_action" value="cart/add">
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
 
-                <div class="input-group"><button class="btn btn-sm btn-primary" type="submit" name="ms2_action"
-                        value="cart/add">
-                        В корзину
-                    </button>
                 </div>
 
-                <!--</div>
-                    </div>-->
+
             </form>
-
         </div>
-        <div class="row g-0 pt-5">
+        <div class="row g-0 pt-4">
             <div class="col-md-3 text-center">
-                <button class="btn btn-small btn-outline-primary">
-                    <i class="bi bi-eye pr-2 "></i><span class="d-none d-md-inline-block px-4 px-md-0">Быстрый
-                        просмотр</span>
-                </button>
-            </div>
-            <div class="col-md-9 pl-4">
-                <div class="pr-4 d-inline-block">
-                    <button class="btn btn-small btn-outline-primary">
-                        <i class="bi bi-heart pr-2 "></i>
-                        <span class="d-none d-md-inline-block px-4 px-md-0">Отложить</span>
+                <div class="d-grid gap-2 d-md-block mb-2 mb-md-0 px-5 px-md-0">
+                    <button class="btn btn-small btn-outline-primary overflow-hidden">
+                        <i class="bi bi-eye pr-2 "></i><span class="">Быстрый
+                            просмотр</span>
                     </button>
                 </div>
-                <div class="pr-4 d-inline-block">
-                    <button class="btn btn-small btn-outline-primary ml-3">
-                        <i class="bi bi-reception-3 pr-2 "></i>
-                        <span class="d-none d-md-inline-block px-4 px-md-0">Сравнить</span>
+            </div>
+            <div class="col-md-9 mb-4 mb-md-0 px-5 px-md-4">
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-small btn-outline-primary msfavorites" data-click data-data-list="default"
+                        data-data-type="resource" data-data-key="{$id}">
+                        <i class="bi bi-heart msfavorites-text-add" title="добавить в избранное"></i>
+                        <span class="msfavorites-text-add">В избранное</span>
+                        <i class="bi bi-heart-fill msfavorites-text-remove" title="удалить из избранного"></i>
+                        <span class=" msfavorites-text-remove">Удалить из
+                            избранного</span>
                     </button>
-
+                    <button class="btn btn-small btn-outline-primary ml-3">
+                        <i class="bi bi-reception-3 "></i>
+                        <span class="">Сравнить</span>
+                    </button>
                 </div>
 
             </div>
