@@ -24410,6 +24410,10 @@ footer .info .subscribe_button .btn:hover {
   color: #365edc;
 }
 
+.aside__left-menu .accordion-item .accordion-body .btn-group.first a.btn-link {
+  border-top: 1px solid #ececec;
+}
+
 .aside__left-banner .banner {
   border: 1px solid #ececec;
 }

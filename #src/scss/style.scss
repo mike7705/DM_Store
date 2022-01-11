@@ -296,6 +296,9 @@ body {
 // category ====================================================================================================
 // aside ==========================================================================================
 .aside__left-menu {
+	& .accordion-item .accordion-body .btn-group.first a.btn-link {
+		border-top: 1px solid #ececec;
+	}
 }
 .aside__left-banner {
 	& .banner {

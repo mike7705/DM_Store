@@ -22,7 +22,9 @@
             </div>
             <div class="col-md-6 pl-3">
                 <div class="card-body px-3 d-flex flex-column justify-content-between">
-                    <h5 class="card-title"><a href="{$_modx->makeUrl($id)}">{$menutitle ?: $pagetitle}</a></h5>
+                    <h5 class="card-title"><a href="{$_modx->makeUrl($id)}">{$menutitle ?: $pagetitle}</a>{"!pdoField" |
+                        snippet :
+                        ["id"=>$id,"topLevel"=>2,"field"=>"id","context"=>"web"]}</h5>
                     <div class="card-raiting">
                         <div class="rating rating_set">
                             <div class="rating__body">

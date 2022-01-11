@@ -1,7 +1,10 @@
+{"!pdoField" | snippet :
+["id"=>$id,"topLevel"=>2,"field"=>"id","context"=>"web"]}
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <div class="card h-100 position-relative border-1 rounded-bottom outline-0">
         <div class="features top-menu pt-3 pl-3">
             <div class="features-top-wrapper">
+
                 {if $new ?}<div class="feature feature-discount b-radius-2">Акция</div>{/if}
                 {if $favorite?}<div class="feature feature-discount b-radius-2">Акция</div>{/if}
                 {if $popular ?}<div class="feature feature-hit b-radius-2">Хит</div>{/if}
