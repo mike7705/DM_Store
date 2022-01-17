@@ -44,12 +44,32 @@ for (let index = 0; index < someCountBlocks.length; index++) {
     }
 
 
-}
-let someCountBlocks = document.querySelectorAll('.__some-count-block')
+}let someCountBlocks = document.querySelectorAll('.__some-count-block')
 for (let index = 0; index < someCountBlocks.length; index++) {
     let countBlock = someCountBlocks[index]
     $(countBlock).on("change", 'input', function (e) {
         let target = e.target
         console.log(target)
     })
-}*/
+}let slickReviews = document.querySelectorAll('.ec-message__files')
+for (let index = 0; index < slickReviews.length; index++) {
+    let slickReview = slickReviews[index]
+    $(slickReview).slick(slickParams);
+    $(slickReview).slickLightBox();
+}
+*/
+let slickParams = {
+    //lazyLoad: "ondemand",
+    dots: false,
+    speed: 300,
+    //slidesToShow: 3,
+    //slidesToScroll: 1,
+    centerMode: false,
+    variableWidth: true,
+    respondTo: 'slider',
+    //adaptiveHeight: true
+}
+let swipeboxParams = {
+    hideCloseButtonOnMobile: false,
+    removeBarsOnMobile: false
+}

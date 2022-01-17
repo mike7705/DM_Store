@@ -388,6 +388,7 @@ section.main {
         z-index: 53;
         font-style: 14px;
         color: rgb(153, 153, 153);
+
         & ul {
             list-style-type: none;
             & > li {
@@ -409,6 +410,28 @@ section.main {
                         }
                     }
                 }
+            }
+        }
+        & ul.comparison {
+            & > li {
+                & > a.comparison-add {
+                    display: inline-block !important;
+                }
+                & > a.comparison-remove,
+                & > a.comparison-go,
+                & > a.comparison-total {
+                    display: none !important;
+                }
+            }
+        }
+        & ul.comparison.added li {
+            & > a.comparison-add {
+                display: none !important;
+            }
+            & > a.comparison-remove,
+            & > a.comparison-go,
+            & > a.comparison-total {
+                display: inline-block !important;
             }
         }
         & .features-right-wrapper {

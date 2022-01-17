@@ -1,0 +1,195 @@
+footer {
+  background: #333;
+  font-size: 15px;
+  color: white;
+}
+
+footer .footer-inner {
+  position: relative;
+  margin: 0px;
+  padding: 59px 0 64px;
+}
+
+footer .footer_top {
+  padding-bottom: 70px;
+}
+
+footer .footer_top .footer_top-content {
+  padding: 0px 30px;
+  margin: 0 auto;
+  background: none;
+  float: none;
+}
+
+footer .footer_top .footer_top-content::before {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+footer .footer_top .footer_top-content .footer .bottom-menu {
+  margin: -5px 0 0;
+}
+
+footer .footer_top .footer_top-content .bottom-menu.second .item {
+  margin: 20px 0 0;
+}
+
+footer .footer_top .footer_top-content .bottom-menu .item .title {
+  font-size: 0.867em;
+  font-weight: bold;
+  line-height: 1.5385em;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+footer .footer_top .footer_top-content .bottom-menu .wrap .item .title {
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+footer .footer_middle {
+  margin-bottom: 42px;
+}
+
+footer .bottom-menu .wrap .item .title a {
+  color: #999999;
+}
+
+footer .bottom-menu .item .title a {
+  color: #fff;
+}
+
+footer .info {
+  color: #ffffff;
+}
+
+footer .bottom-menu .wrap .item .title a:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+footer .bottom-menu .wrap .item .title a {
+  color: #999999;
+}
+
+footer .bottom-menu .item .title a:hover {
+  opacity: 0.5;
+}
+
+footer .bottom-menu .item .title a {
+  color: #fff;
+}
+
+footer .phone {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+footer .info .phone.blocks .phone.with_dropdown {
+  margin-right: 7px;
+  display: inline-block;
+}
+
+footer .info .phone.blocks .phone {
+  position: relative;
+  margin: 0 19px 0 0;
+  white-space: nowrap;
+  padding-right: 0 !important;
+}
+
+footer .info .phone.blocks {
+  margin: 0 0 14px;
+  white-space: normal;
+}
+
+footer .phone {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+footer .info .email {
+  margin: 0 0 22px;
+  line-height: 1.3333em;
+  padding: 0 0 0 29px;
+  position: relative;
+  display: inline-block;
+}
+
+footer .info .subscribe_button {
+  margin: 0 9px 35px 0px;
+}
+
+footer .info .phone.blocks .phone .svg.svg-inline-down {
+  right: 0px;
+  margin-top: -2px;
+}
+
+footer .info .email .svg {
+  top: 6px;
+  left: 0px;
+}
+
+footer .info .svg {
+  position: absolute;
+  opacity: 0.5;
+}
+
+footer .with_dropdown .svg-inline-down {
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  margin: -2px 0px 0px;
+  width: 5px;
+  height: 3px;
+  display: block;
+}
+
+footer footer .address.blocks {
+  padding-right: 20px;
+}
+
+footer footer .info .address {
+  position: relative;
+  padding: 0 0 0 29px;
+  line-height: 1.3333em;
+  color: #fff;
+  display: inline-block;
+}
+
+footer .wrapper_inner,
+footer .maxwidth-theme {
+  padding: 0px 30px;
+  margin: 0 auto;
+  background: #fff;
+  float: none;
+}
+
+footer .info .subscribe_button {
+  margin: 0 9px 35px 0px;
+}
+
+footer .info .subscribe_button .btn {
+  position: relative;
+  display: block;
+  padding: 15px 45px 14px 18px;
+  white-space: normal;
+  background: #494949;
+  border-color: #494949;
+  text-align: left;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+
+footer .info .subscribe_button .btn:hover {
+  background-color: #5073e1;
+  border-color: #5073e1;
+}
+
+footer .info .subscribe_button .btn:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=footer.css.map */

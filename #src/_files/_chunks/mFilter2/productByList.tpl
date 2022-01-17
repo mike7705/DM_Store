@@ -22,9 +22,7 @@
             </div>
             <div class="col-md-6 pl-3">
                 <div class="card-body px-3 d-flex flex-column justify-content-between">
-                    <h5 class="card-title"><a href="{$_modx->makeUrl($id)}">{$menutitle ?: $pagetitle}</a>{"!pdoField" |
-                        snippet :
-                        ["id"=>$id,"topLevel"=>2,"field"=>"id","context"=>"web"]}</h5>
+                    <h5 class="card-title"><a href="{$_modx->makeUrl($id)}">{$menutitle ?: $pagetitle}</a></h5>
                     <div class="card-raiting">
                         <div class="rating rating_set">
                             <div class="rating__body">
@@ -46,8 +44,7 @@
                         </div>
                         <div class="card-text text-left d-flex flex-column justify-content-between text-dark">
                             {$id | resource : 'content' | truncate : 200: '<br /><a class="text-secondary"
-                                href="{$_modx->makeUrl($id)}">читать
-                                дальше...</a>': true : false}
+                                href="[[~[[+id]]]]">подробнее...</a>': true : false}
                         </div>
                     </div>
                 </div>
@@ -117,15 +114,15 @@
                         <span class=" msfavorites-text-remove">Удалить из
                             избранного</span>
                     </button>
-                    <button class="btn btn-small btn-outline-primary ml-3">
-                        <i class="bi bi-reception-3 "></i>
-                        <span class="">Сравнить</span>
-                    </button>
+                    [[!addComparison?
+                    &list_id=`193`
+                    &list=`[[+id:pdofield=`{ "topLevel":"2","field":"id","contex":"web"}`]]`
+                    &id=`[[+id]]`
+                    &tpl=`tpl.category.list.Comparison.add`
+                    ]]
                 </div>
-
             </div>
         </div>
-
         <div class="features top-menu pt-3 pl-3">
             <div class="features-top-wrapper">
                 {if $new ?}<div class="feature feature-discount b-radius-2">Акция</div>{/if}

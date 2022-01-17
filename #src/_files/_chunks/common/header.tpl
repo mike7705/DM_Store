@@ -8,7 +8,7 @@
                 <!-- Logo -->
                 <div class="navigation-logo">
                     <a href="/">
-                        <img src="img/min_logo.svg" width="110" height="19" alt="logo">
+                        <img src="assets/img/kbt_logo.png" alt="logo" style="max-height: 20px;">
                     </a>
                 </div>
 
@@ -243,14 +243,25 @@
                         </a></li>
                     <li class="navigation-item hide-on-landscape"><a href="#" class="navigation-link"><i
                                 class="icon-basket"></i><span class="bold">Корзина</span><span
-                                class="navigation-badge">5</span></a>
+                                class="navigation-badge ms2_total_count">{'!msMiniCart' | snippet : ['tpl' => '@INLINE
+                                <span class="ms2_total_count">{$total_count}</span>']}</span></a>
                     </li>
-                    <li class="navigation-item hide-on-landscape-"><a href="[[~192]]" class="navigation-link"><i
-                                class="icon-favorite"></i><span class="bold ">Избранное</span><span
-                                class="navigation-badge msfavorites-total"></span></a></li>
-                    <li class="navigation-item hide-on-landscape"><a href="#" class="navigation-link"><i
-                                class="icon-compare"></i><span class="bold ">Сравнение товаров</span><span
-                                class="navigation-badge">5</span></a></li>
+                    <li class="navigation-item hide-on-landscape-">
+                        <a href="[[~192]]" class="navigation-link msfavorites" data-click data-data-list="default"
+                            data-data-type="resource" data-data-key="9">
+                            <i class="icon-favorite"></i>
+                            <span class="bold ">Избранное</span>
+                            <span class="navigation-badge msfavorites-total text-white"></span>
+                        </a>
+                    </li>
+
+                    <li class="navigation-item hide-on-landscape">
+                        [[!addComparison?
+                        &list=`{'pdoField' | snippet : ['topLevel' => 2,'field' => 'id','contex' => 'web']}`
+                        &list_id=`193`
+                        &tpl=`tpl.Comparison.num`
+                        ]]
+                    </li>
                 </ul>
                 <div class="navigation-body-section hide-on-landscape">
                     <div class="navigation-text __mobile-menu-contacts bold">Контактная информация

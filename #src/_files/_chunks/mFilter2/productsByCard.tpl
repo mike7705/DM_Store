@@ -1,5 +1,4 @@
-{"!pdoField" | snippet :
-["id"=>$id,"topLevel"=>2,"field"=>"id","context"=>"web"]}
+{set $list = "!pdoField" | snippet : ["id"=>$id,"topLevel"=>2,"field"=>"id","context"=>"web"]}
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <div class="card h-100 position-relative border-1 rounded-bottom outline-0">
         <div class="features top-menu pt-3 pl-3">
@@ -11,15 +10,20 @@
             </div>
         </div>
         <div class="features right-menu pt-3 pr-3">
-            <ul class="features-right-wrapper">
-                <li><a class="b-radius-3 msfavorites" data-click data-data-list="default" data-data-type="resource"
-                        data-data-key="{$id}" href="[[~192]]"><i class="bi bi-heart msfavorites-text-add"
-                            title="добавить в избранное"></i><i class="bi bi-heart-fill msfavorites-text-remove"
-                            title="удалить из избранного"></i></a>
-                </li>
-                <li><a class="b-radius-3" href="#"><i class="icon-compare"></i></a></li>
-                <!--<li><a class="b-radius-3" href="#"><i class="icon-buy-at-click"></i></a></li>-->
-                <li><a class="b-radius-3" href="#"><i class="icon-quick-preview"></i></a></li>
+
+            [[!addComparison?
+            &list_id=`193`
+            &list=`[[+id:pdofield=`{ "topLevel":"2","field":"id","contex":"web"}`]]`
+            &id=`[[+id]]`
+            &tpl=`tpl.category.card.Comparison.add`
+            ]]
+
+            <li><a class="b-radius-3 msfavorites fs-7" data-click data-data-list="default" data-data-type="resource"
+                    data-data-key="{$id}" href="[[~192]]"><i class="bi bi-heart msfavorites-text-add"
+                        title="добавить в избранное"></i><i class="bi bi-heart-fill msfavorites-text-remove"
+                        title="удалить из избранного"></i></a>
+            </li>
+            <li><a class="b-radius-3" href="#"><i class="icon-quick-preview"></i></a></li>
             </ul>
         </div>
         <div class="card-img-top ratio ratio-1x1 position-relative">
